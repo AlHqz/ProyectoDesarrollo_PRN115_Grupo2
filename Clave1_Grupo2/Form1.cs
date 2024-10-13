@@ -20,6 +20,7 @@ namespace Clave1_Grupo2
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Salir Prueba");
+            MessageBox.Show("Cambio Diego");
         }
     }
 }

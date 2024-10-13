@@ -1,0 +1,10 @@
+C:\Users\aleja\Source\Repos\ProyectoDesarrollo_PRN115_Grupo2\Clave1_Grupo2\bin\Debug\Clave1_Grupo2.exe.config
+C:\Users\aleja\Source\Repos\ProyectoDesarrollo_PRN115_Grupo2\Clave1_Grupo2\bin\Debug\Clave1_Grupo2.exe
+C:\Users\aleja\Source\Repos\ProyectoDesarrollo_PRN115_Grupo2\Clave1_Grupo2\bin\Debug\Clave1_Grupo2.pdb
+C:\Users\aleja\Source\Repos\ProyectoDesarrollo_PRN115_Grupo2\Clave1_Grupo2\obj\Debug\Clave1_Grupo2.csproj.AssemblyReference.cache
+C:\Users\aleja\Source\Repos\ProyectoDesarrollo_PRN115_Grupo2\Clave1_Grupo2\obj\Debug\Clave1_Grupo2.Form1.resources
+C:\Users\aleja\Source\Repos\ProyectoDesarrollo_PRN115_Grupo2\Clave1_Grupo2\obj\Debug\Clave1_Grupo2.Properties.Resources.resources
+C:\Users\aleja\Source\Repos\ProyectoDesarrollo_PRN115_Grupo2\Clave1_Grupo2\obj\Debug\Clave1_Grupo2.csproj.GenerateResource.cache
+C:\Users\aleja\Source\Repos\ProyectoDesarrollo_PRN115_Grupo2\Clave1_Grupo2\obj\Debug\Clave1_Grupo2.csproj.CoreCompileInputs.cache
+C:\Users\aleja\Source\Repos\ProyectoDesarrollo_PRN115_Grupo2\Clave1_Grupo2\obj\Debug\Clave1_Grupo2.exe
+C:\Users\aleja\Source\Repos\ProyectoDesarrollo_PRN115_Grupo2\Clave1_Grupo2\obj\Debug\Clave1_Grupo2.pdb
