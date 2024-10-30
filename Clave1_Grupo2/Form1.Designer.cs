@@ -36,7 +36,6 @@ namespace Clave1_Grupo2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 195);
-            this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -45,8 +44,6 @@ namespace Clave1_Grupo2
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
     }
 }
 
