@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clave1_Grupo2
 {
-    public partial class Form1 : Form
+    public partial class AdminForm : Form
     {
-        public Form1()
+        public AdminForm()
         {
             InitializeComponent();
         }

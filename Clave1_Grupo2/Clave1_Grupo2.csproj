@@ -46,16 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClienteForm.Designer.cs">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="VeterinarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VeterinarioForm.Designer.cs">
+      <DependentUpon>VeterinarioForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClienteForm.resx">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +89,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VeterinarioForm.resx">
+      <DependentUpon>VeterinarioForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +106,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\veterinarios_Valencia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mascotas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\perro para productos y servicios.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agendar cita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras tienda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mascota.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vacunas.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
