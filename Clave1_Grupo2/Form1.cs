@@ -16,13 +16,5 @@ namespace Clave1_Grupo2
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Salir Prueba");
-            MessageBox.Show("Cambio Diego");
-            MessageBox.Show("Cambio Milton");
-            MessageBox.Show("Cambio Portillo");
-        }
     }
 }
