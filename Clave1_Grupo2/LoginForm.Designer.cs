@@ -110,6 +110,7 @@ namespace Clave1_Grupo2
             this.btnIniciarSesion.TabIndex = 11;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // btnCancelar
             // 
@@ -119,6 +120,7 @@ namespace Clave1_Grupo2
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // LoginForm
             // 
