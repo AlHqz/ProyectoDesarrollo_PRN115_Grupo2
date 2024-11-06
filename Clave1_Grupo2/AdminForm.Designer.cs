@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCliente = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.groupBoxClienteInfo = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.tabMascota = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dgvMascotas = new System.Windows.Forms.DataGridView();
             this.btnActualizarMascotas = new System.Windows.Forms.Button();
             this.btnEliminarMascota = new System.Windows.Forms.Button();
@@ -72,6 +74,7 @@
             this.txtNombreMascota = new System.Windows.Forms.TextBox();
             this.lblNombreMascota = new System.Windows.Forms.Label();
             this.tabFacturacion = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.dgvFacturacion = new System.Windows.Forms.DataGridView();
             this.groupBoxFacturacion = new System.Windows.Forms.GroupBox();
             this.btnConfirmarPago = new System.Windows.Forms.Button();
@@ -82,6 +85,7 @@
             this.cmbServicioPrestado = new System.Windows.Forms.ComboBox();
             this.lblServicioPrestado = new System.Windows.Forms.Label();
             this.tabProductosServicios = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBoxProductosServicios = new System.Windows.Forms.GroupBox();
             this.btnActualizarProductos = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
@@ -90,6 +94,7 @@
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabCitas = new System.Windows.Forms.TabPage();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NombreMascota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -130,34 +135,29 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.groupBoxClienteInfo.SuspendLayout();
             this.tabMascota.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).BeginInit();
             this.groupBoxMascotaInfo.SuspendLayout();
             this.tabFacturacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturacion)).BeginInit();
             this.groupBoxFacturacion.SuspendLayout();
             this.tabProductosServicios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBoxProductosServicios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.tabCitas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbCitas.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -186,6 +186,16 @@
             this.tabCliente.TabIndex = 0;
             this.tabCliente.Text = "Cliente";
             this.tabCliente.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Clave1_Grupo2.Properties.Resources.cliente;
+            this.pictureBox3.Location = new System.Drawing.Point(490, 231);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(293, 185);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
             // 
             // dgvClientes
             // 
@@ -228,6 +238,7 @@
             this.btnBuscar.TabIndex = 12;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtEmail
             // 
@@ -244,6 +255,7 @@
             this.btnEliminarCliente.TabIndex = 5;
             this.btnEliminarCliente.Text = "Eliminar";
             this.btnEliminarCliente.UseVisualStyleBackColor = true;
+            this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
             // btnActualizarCliente
             // 
@@ -253,6 +265,7 @@
             this.btnActualizarCliente.TabIndex = 6;
             this.btnActualizarCliente.Text = "Actualizar";
             this.btnActualizarCliente.UseVisualStyleBackColor = true;
+            this.btnActualizarCliente.Click += new System.EventHandler(this.btnActualizarCliente_Click);
             // 
             // lblEmail
             // 
@@ -278,6 +291,7 @@
             this.btnModificarCliente.TabIndex = 4;
             this.btnModificarCliente.Text = "Modificar";
             this.btnModificarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // lblDireccion
             // 
@@ -372,6 +386,16 @@
             this.tabMascota.TabIndex = 1;
             this.tabMascota.Text = "Mascota";
             this.tabMascota.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Clave1_Grupo2.Properties.Resources.mascotas;
+            this.pictureBox2.Location = new System.Drawing.Point(476, 284);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(237, 121);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
             // 
             // dgvMascotas
             // 
@@ -592,6 +616,16 @@
             this.tabFacturacion.Text = "Facturación";
             this.tabFacturacion.UseVisualStyleBackColor = true;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Clave1_Grupo2.Properties.Resources.aaa;
+            this.pictureBox4.Location = new System.Drawing.Point(302, 13);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(155, 129);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
+            // 
             // dgvFacturacion
             // 
             this.dgvFacturacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -696,6 +730,16 @@
             this.tabProductosServicios.Text = "Producto/Servicios";
             this.tabProductosServicios.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Clave1_Grupo2.Properties.Resources.perro_para_productos_y_servicios;
+            this.pictureBox1.Location = new System.Drawing.Point(467, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(223, 192);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // groupBoxProductosServicios
             // 
             this.groupBoxProductosServicios.Controls.Add(this.btnActualizarProductos);
@@ -760,6 +804,16 @@
             this.tabCitas.TabIndex = 4;
             this.tabCitas.Text = "Citas";
             this.tabCitas.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Clave1_Grupo2.Properties.Resources.agendar_cita;
+            this.pictureBox5.Location = new System.Drawing.Point(330, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(120, 105);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 2;
+            this.pictureBox5.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -1127,56 +1181,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Nombre:";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Clave1_Grupo2.Properties.Resources.cliente;
-            this.pictureBox3.Location = new System.Drawing.Point(490, 231);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(293, 185);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Clave1_Grupo2.Properties.Resources.mascotas;
-            this.pictureBox2.Location = new System.Drawing.Point(476, 284);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 121);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Clave1_Grupo2.Properties.Resources.aaa;
-            this.pictureBox4.Location = new System.Drawing.Point(302, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(155, 129);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Clave1_Grupo2.Properties.Resources.perro_para_productos_y_servicios;
-            this.pictureBox1.Location = new System.Drawing.Point(467, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 192);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Clave1_Grupo2.Properties.Resources.agendar_cita;
-            this.pictureBox5.Location = new System.Drawing.Point(330, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(120, 105);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1187,32 +1191,32 @@
             this.Text = "AdminForm";
             this.tabControl1.ResumeLayout(false);
             this.tabCliente.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.groupBoxClienteInfo.ResumeLayout(false);
             this.groupBoxClienteInfo.PerformLayout();
             this.tabMascota.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).EndInit();
             this.groupBoxMascotaInfo.ResumeLayout(false);
             this.groupBoxMascotaInfo.PerformLayout();
             this.tabFacturacion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturacion)).EndInit();
             this.groupBoxFacturacion.ResumeLayout(false);
             this.groupBoxFacturacion.PerformLayout();
             this.tabProductosServicios.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBoxProductosServicios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.tabCitas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.gbCitas.ResumeLayout(false);
             this.gbCitas.PerformLayout();
             this.tabUsuarios.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
