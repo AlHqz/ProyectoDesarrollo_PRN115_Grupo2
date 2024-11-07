@@ -1,16 +1,25 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\LoginForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Clave1_Grupo2\\LoginForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 200,
+          "DockedHeight": 243,
           "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -18,8 +27,8 @@
           ]
         },
         {
-          "DockedHeight": 119,
-          "SelectedChildIndex": -1,
+          "DockedHeight": 75,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,15 +40,28 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\LoginForm.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\LoginForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T01:07:50.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

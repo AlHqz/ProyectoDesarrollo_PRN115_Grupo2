@@ -413,6 +413,7 @@
             this.btnActualizarMascotas.TabIndex = 7;
             this.btnActualizarMascotas.Text = "Actualizar";
             this.btnActualizarMascotas.UseVisualStyleBackColor = true;
+            this.btnActualizarMascotas.Click += new System.EventHandler(this.btnActualizarMascotas_Click);
             // 
             // btnEliminarMascota
             // 
@@ -431,6 +432,7 @@
             this.btnModificarMascota.TabIndex = 5;
             this.btnModificarMascota.Text = "Modificar";
             this.btnModificarMascota.UseVisualStyleBackColor = true;
+            this.btnModificarMascota.Click += new System.EventHandler(this.btnModificarMascota_Click);
             // 
             // btnIngresarMascota
             // 
@@ -440,6 +442,7 @@
             this.btnIngresarMascota.TabIndex = 3;
             this.btnIngresarMascota.Text = "Ingresar";
             this.btnIngresarMascota.UseVisualStyleBackColor = true;
+            this.btnIngresarMascota.Click += new System.EventHandler(this.btnIngresarMascota_Click);
             // 
             // groupBoxMascotaInfo
             // 
