@@ -13,57 +13,171 @@ namespace Clave1_Grupo2
 {
     public partial class AdminForm : Form
     {
+        private bool enModoBusqueda = false;
+        private List<Cliente> listaClientes = new List<Cliente>();
         public AdminForm()
         {
             InitializeComponent();
-            CargarClientes(); // Cargar clientes al abrir el formulario
+            CargarClientes(); // Cargar todos los clientes al abrir el formulario
             dgvClientes.SelectionChanged += DgvClientes_SelectionChanged;
+
+            // Deshabilitar todos los campos de entrada por defecto
+            DeshabilitarCampos();
+
+            cmbSexo.Items.Add("Masculino");
+            cmbSexo.Items.Add("Femenino");
+
+            // Deshabilitar el ComboBox de sexo para que no sea editable
+            cmbSexo.Enabled = false;
         }
+
         private void CargarClientes()
         {
-            string nombreBuscado = txtNombre.Text;
-            string query = "SELECT * FROM clientes WHERE nombre LIKE @nombre";
+            string query = "SELECT * FROM clientes";
             string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@nombre", "%" + nombreBuscado + "%");
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+
+                listaClientes.Clear(); // Limpia la lista antes de cargar nuevos datos
+                foreach (DataRow row in dt.Rows)
+                {
+                    Cliente cliente = new Cliente
+                    {
+                        IdCliente = Convert.ToInt32(row["idClientes"]),
+                        Nombre = row["nombre"].ToString(),
+                        Apellido = row["apellido"].ToString(),
+                        Telefono = row["telefono"].ToString(),
+                        Direccion = row["direccion"].ToString(),
+                        Email = row["email"].ToString(),
+                        Sexo = row["sexo"].ToString()
+                    };
+                    listaClientes.Add(cliente);
+                }
+
+                dgvClientes.DataSource = dt; // Muestra los datos en el DataGridView
+            }
+        }
+
+
+        private void DeshabilitarCampos()
+        {
+            txtNombre.Enabled = false;
+            txtApellido.Enabled = false;
+            txtTelefono.Enabled = false;
+            txtDireccion.Enabled = false;
+            txtEmail.Enabled = false;
+
+            // Deshabilitar ComboBox de sexo
+            cmbSexo.Enabled = false;
+        }
+
+        // Habilita solo los campos permitidos para modificación
+        private void HabilitarCamposModificables()
+        {
+            txtTelefono.Enabled = true;
+            txtDireccion.Enabled = true;
+            txtEmail.Enabled = true;
+        }
+
+        private void BuscarClientes()
+        {
+            string nombreBuscado = txtNombre.Text.Trim();
+            string apellidoBuscado = txtApellido.Text.Trim();
+
+            string query = "SELECT * FROM clientes WHERE 1=1";
+            if (!string.IsNullOrEmpty(nombreBuscado))
+            {
+                query += " AND nombre LIKE @nombre";
+            }
+            if (!string.IsNullOrEmpty(apellidoBuscado))
+            {
+                query += " AND apellido LIKE @apellido";
+            }
+
+            string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                if (!string.IsNullOrEmpty(nombreBuscado))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", "%" + nombreBuscado + "%");
+                }
+                if (!string.IsNullOrEmpty(apellidoBuscado))
+                {
+                    cmd.Parameters.AddWithValue("@apellido", "%" + apellidoBuscado + "%");
+                }
 
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
-                dgvClientes.DataSource = dt;
-            }
-        }
 
+                listaClientes.Clear();
+                foreach (DataRow row in dt.Rows)
+                {
+                    Cliente cliente = new Cliente
+                    {
+                        IdCliente = Convert.ToInt32(row["idClientes"]),
+                        Nombre = row["nombre"].ToString(),
+                        Apellido = row["apellido"].ToString(),
+                        Telefono = row["telefono"].ToString(),
+                        Direccion = row["direccion"].ToString(),
+                        Email = row["email"].ToString(),
+                        Sexo = row["sexo"].ToString()
+                    };
+                    listaClientes.Add(cliente);
+                }
+
+                dgvClientes.DataSource = dt; // Actualiza el DataGridView con los resultados
+            }
+
+            txtNombre.Enabled = false;
+            txtApellido.Enabled = false;
+        }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (dgvClientes.SelectedRows.Count > 0)
+            if (!enModoBusqueda)
             {
-                txtTelefono.Enabled = true;
-                txtDireccion.Enabled = true;
-                txtEmail.Enabled = true;
+                // Activar modo de búsqueda
+                enModoBusqueda = true;
+                txtNombre.Enabled = true;
+                txtApellido.Enabled = true;
+                txtNombre.Focus();
+            }
+            else
+            {
+                // Ejecutar búsqueda y luego desactivar modo de búsqueda
+                BuscarClientes();
+                enModoBusqueda = false;
+                txtNombre.Enabled = false;
+                txtApellido.Enabled = false;
+                txtNombre.Clear();
+                txtApellido.Clear();
             }
         }
 
+        // Evento del botón Modificar Cliente
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
             if (dgvClientes.SelectedRows.Count > 0)
             {
-                txtTelefono.Enabled = true;
-                txtDireccion.Enabled = true;
-                txtEmail.Enabled = true;
+                HabilitarCamposModificables(); // Habilitar solo teléfono, dirección y email
             }
         }
+
 
         private void btnActualizarCliente_Click(object sender, EventArgs e)
         {
             if (dgvClientes.SelectedRows.Count > 0)
             {
-                int clienteId = Convert.ToInt32(dgvClientes.SelectedRows[0].Cells["id"].Value);
-                string query = "UPDATE clientes SET telefono = @telefono, direccion = @direccion, email = @email WHERE id = @id";
+                int clienteId = Convert.ToInt32(dgvClientes.SelectedRows[0].Cells["idClientes"].Value);
+                string query = "UPDATE clientes SET telefono = @telefono, direccion = @direccion, email = @email WHERE idClientes = @id";
                 string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
 
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -78,8 +192,10 @@ namespace Clave1_Grupo2
                     cmd.ExecuteNonQuery();
                     conn.Close();
                 }
+
                 MessageBox.Show("Cliente actualizado correctamente.");
-                CargarClientes(); // Refresca el DataGridView con los datos actualizados
+                CargarClientes(); // Refresca el DataGridView con todos los clientes después de actualizar
+                DeshabilitarCampos();
             }
         }
 
@@ -87,8 +203,8 @@ namespace Clave1_Grupo2
         {
             if (dgvClientes.SelectedRows.Count > 0)
             {
-                int clienteId = Convert.ToInt32(dgvClientes.SelectedRows[0].Cells["id"].Value);
-                string query = "DELETE FROM clientes WHERE id = @id";
+                int clienteId = Convert.ToInt32(dgvClientes.SelectedRows[0].Cells["idClientes"].Value);
+                string query = "DELETE FROM clientes WHERE idClientes = @id";
                 string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
 
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -100,8 +216,10 @@ namespace Clave1_Grupo2
                     cmd.ExecuteNonQuery();
                     conn.Close();
                 }
+
                 MessageBox.Show("Cliente eliminado correctamente.");
-                CargarClientes(); // Refresca el DataGridView con los datos actualizados
+                CargarClientes();
+                DeshabilitarCampos();
             }
         }
         // Evento que actualiza los campos en el GroupBox cuando se selecciona un cliente en el DataGridView
@@ -109,14 +227,40 @@ namespace Clave1_Grupo2
         {
             if (dgvClientes.SelectedRows.Count > 0)
             {
-                txtTelefono.Enabled = false;
-                txtDireccion.Enabled = false;
-                txtEmail.Enabled = false;
+                object cellValue = dgvClientes.SelectedRows[0].Cells["idClientes"].Value;
 
-                txtNombre.Text = dgvClientes.SelectedRows[0].Cells["nombre"].Value.ToString();
-                txtTelefono.Text = dgvClientes.SelectedRows[0].Cells["telefono"].Value.ToString();
-                txtDireccion.Text = dgvClientes.SelectedRows[0].Cells["direccion"].Value.ToString();
-                txtEmail.Text = dgvClientes.SelectedRows[0].Cells["email"].Value.ToString();
+                if (cellValue != DBNull.Value)
+                {
+                    int clienteId = Convert.ToInt32(cellValue);
+
+                    Cliente clienteSeleccionado = listaClientes.FirstOrDefault(c => c.IdCliente == clienteId);
+
+                    if (clienteSeleccionado != null)
+                    {
+                        txtNombre.Text = clienteSeleccionado.Nombre;
+                        txtApellido.Text = clienteSeleccionado.Apellido;
+                        txtTelefono.Text = clienteSeleccionado.Telefono;
+                        txtDireccion.Text = clienteSeleccionado.Direccion;
+                        txtEmail.Text = clienteSeleccionado.Email;
+
+                        if (clienteSeleccionado.Sexo == "Masculino")
+                        {
+                            cmbSexo.SelectedIndex = 0;
+                        }
+                        else if (clienteSeleccionado.Sexo == "Femenino")
+                        {
+                            cmbSexo.SelectedIndex = 1;
+                        }
+                    }
+                }
+                else
+                {
+                    // Si el valor es DBNull, puedes decidir qué hacer. Por ejemplo:
+                    MessageBox.Show("El ID del cliente es nulo. Verifique los datos seleccionados.");
+                }
+            }
+            else
+            {
             }
         }
 
