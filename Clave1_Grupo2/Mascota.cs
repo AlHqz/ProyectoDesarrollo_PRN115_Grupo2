@@ -9,27 +9,31 @@ namespace Clave1_Grupo2
 {
     internal class Mascota
     {
-        public int IdMascota { get; set; }
-        public string Nombre { get; set; }
-        public string Raza { get; set; }
+        public int IdMascotas { get; set; }
+        public int IdDueno { get; set; }
+        public string NombreMascota { get; set; }
         public string Especie { get; set; }
-        public int Edad { get; set; }
-        public decimal Peso { get; set; }
+        public string Raza { get; set; }
+        public int EdadEnMeses { get; set; }
+        public double Peso { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public bool Castrado { get; set; }
-        public int IdCliente { get; set; }
-
         public Mascota() { }
-        public Mascota(string nombre, string raza, string especie, int edad, decimal peso, DateTime fechaNacimiento, bool castrado, int idClientes)
+        public Mascota(int idMascotas, int idDueno, string nombreMascota, string especie, string raza, int edadEnMeses, double peso, DateTime fechaNacimiento, bool castrado)
         {
-            Nombre = nombre;
-            Raza = raza;
+            IdMascotas = idMascotas;
+            IdDueno = idDueno;
+            NombreMascota = nombreMascota;
             Especie = especie;
-            Edad = edad;
+            Raza = raza;
+            EdadEnMeses = edadEnMeses;
             Peso = peso;
             FechaNacimiento = fechaNacimiento;
             Castrado = castrado;
-            IdCliente = idClientes;
+        }
+        public override string ToString()
+        {
+            return $"{NombreMascota} ({Especie}), Raza: {Raza}, Edad: {EdadEnMeses} meses, Peso: {Peso} kg, Castrado: {(Castrado ? "Sí" : "No")}";
         }
     }
 }

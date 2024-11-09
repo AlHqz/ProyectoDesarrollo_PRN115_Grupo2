@@ -57,7 +57,7 @@
             this.btnModificarMascota = new System.Windows.Forms.Button();
             this.btnIngresarMascota = new System.Windows.Forms.Button();
             this.groupBoxMascotaInfo = new System.Windows.Forms.GroupBox();
-            this.cmbDueno = new System.Windows.Forms.ComboBox();
+            this.cmbDueño = new System.Windows.Forms.ComboBox();
             this.lblDueño = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.lblCastrado = new System.Windows.Forms.Label();
@@ -89,10 +89,6 @@
             this.groupBoxProductosServicios = new System.Windows.Forms.GroupBox();
             this.btnActualizarProductos = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabCitas = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -135,6 +131,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnVerificarConexion = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -176,6 +174,8 @@
             // 
             // tabCliente
             // 
+            this.tabCliente.Controls.Add(this.btnVerificarConexion);
+            this.tabCliente.Controls.Add(this.btnCerrarSesion);
             this.tabCliente.Controls.Add(this.pictureBox3);
             this.tabCliente.Controls.Add(this.dgvClientes);
             this.tabCliente.Controls.Add(this.groupBoxClienteInfo);
@@ -190,9 +190,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Clave1_Grupo2.Properties.Resources.cliente;
-            this.pictureBox3.Location = new System.Drawing.Point(490, 231);
+            this.pictureBox3.Location = new System.Drawing.Point(487, 231);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(293, 185);
+            this.pictureBox3.Size = new System.Drawing.Size(219, 153);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 9;
             this.pictureBox3.TabStop = false;
@@ -392,7 +392,7 @@
             this.pictureBox2.Image = global::Clave1_Grupo2.Properties.Resources.mascotas;
             this.pictureBox2.Location = new System.Drawing.Point(476, 284);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(237, 121);
+            this.pictureBox2.Size = new System.Drawing.Size(279, 121);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 16;
             this.pictureBox2.TabStop = false;
@@ -404,6 +404,7 @@
             this.dgvMascotas.Name = "dgvMascotas";
             this.dgvMascotas.Size = new System.Drawing.Size(460, 399);
             this.dgvMascotas.TabIndex = 8;
+            this.dgvMascotas.SelectionChanged += new System.EventHandler(this.dgvMascotas_SelectionChanged);
             // 
             // btnActualizarMascotas
             // 
@@ -423,6 +424,7 @@
             this.btnEliminarMascota.TabIndex = 6;
             this.btnEliminarMascota.Text = "Eliminar";
             this.btnEliminarMascota.UseVisualStyleBackColor = true;
+            this.btnEliminarMascota.Click += new System.EventHandler(this.btnEliminarMascota_Click);
             // 
             // btnModificarMascota
             // 
@@ -446,7 +448,7 @@
             // 
             // groupBoxMascotaInfo
             // 
-            this.groupBoxMascotaInfo.Controls.Add(this.cmbDueno);
+            this.groupBoxMascotaInfo.Controls.Add(this.cmbDueño);
             this.groupBoxMascotaInfo.Controls.Add(this.lblDueño);
             this.groupBoxMascotaInfo.Controls.Add(this.checkBox1);
             this.groupBoxMascotaInfo.Controls.Add(this.lblCastrado);
@@ -469,13 +471,14 @@
             this.groupBoxMascotaInfo.TabStop = false;
             this.groupBoxMascotaInfo.Text = "Información de la Mascota";
             // 
-            // cmbDueno
+            // cmbDueño
             // 
-            this.cmbDueno.FormattingEnabled = true;
-            this.cmbDueno.Location = new System.Drawing.Point(95, 16);
-            this.cmbDueno.Name = "cmbDueno";
-            this.cmbDueno.Size = new System.Drawing.Size(121, 21);
-            this.cmbDueno.TabIndex = 16;
+            this.cmbDueño.FormattingEnabled = true;
+            this.cmbDueño.Location = new System.Drawing.Point(95, 16);
+            this.cmbDueño.Name = "cmbDueño";
+            this.cmbDueño.Size = new System.Drawing.Size(121, 21);
+            this.cmbDueño.TabIndex = 16;
+            this.cmbDueño.SelectedIndexChanged += new System.EventHandler(this.cmbDueño_SelectedIndexChanged);
             // 
             // lblDueño
             // 
@@ -724,6 +727,7 @@
             // 
             // tabProductosServicios
             // 
+            this.tabProductosServicios.Controls.Add(this.btnActualizarProductos);
             this.tabProductosServicios.Controls.Add(this.pictureBox1);
             this.tabProductosServicios.Controls.Add(this.groupBoxProductosServicios);
             this.tabProductosServicios.Location = new System.Drawing.Point(4, 22);
@@ -736,7 +740,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Clave1_Grupo2.Properties.Resources.perro_para_productos_y_servicios;
-            this.pictureBox1.Location = new System.Drawing.Point(467, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(575, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(223, 192);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -745,56 +749,31 @@
             // 
             // groupBoxProductosServicios
             // 
-            this.groupBoxProductosServicios.Controls.Add(this.btnActualizarProductos);
             this.groupBoxProductosServicios.Controls.Add(this.dgvProductos);
             this.groupBoxProductosServicios.Location = new System.Drawing.Point(6, 6);
             this.groupBoxProductosServicios.Name = "groupBoxProductosServicios";
-            this.groupBoxProductosServicios.Size = new System.Drawing.Size(455, 198);
+            this.groupBoxProductosServicios.Size = new System.Drawing.Size(549, 414);
             this.groupBoxProductosServicios.TabIndex = 0;
             this.groupBoxProductosServicios.TabStop = false;
             this.groupBoxProductosServicios.Text = "Inventario de Productos y Servicios";
             // 
             // btnActualizarProductos
             // 
-            this.btnActualizarProductos.Location = new System.Drawing.Point(181, 160);
+            this.btnActualizarProductos.Location = new System.Drawing.Point(575, 201);
             this.btnActualizarProductos.Name = "btnActualizarProductos";
             this.btnActualizarProductos.Size = new System.Drawing.Size(113, 23);
             this.btnActualizarProductos.TabIndex = 1;
             this.btnActualizarProductos.Text = "Actualizar Inventario";
             this.btnActualizarProductos.UseVisualStyleBackColor = true;
+            this.btnActualizarProductos.Click += new System.EventHandler(this.btnActualizarProductos_Click);
             // 
             // dgvProductos
             // 
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NombreProducto,
-            this.Descripcion,
-            this.Precio,
-            this.CantidadStock});
             this.dgvProductos.Location = new System.Drawing.Point(6, 19);
             this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.Size = new System.Drawing.Size(443, 135);
+            this.dgvProductos.Size = new System.Drawing.Size(539, 389);
             this.dgvProductos.TabIndex = 0;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.HeaderText = "Nombre del Producto";
-            this.NombreProducto.Name = "NombreProducto";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // CantidadStock
-            // 
-            this.CantidadStock.HeaderText = "Cantidad en Stock";
-            this.CantidadStock.Name = "CantidadStock";
             // 
             // tabCitas
             // 
@@ -1184,11 +1163,31 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Nombre:";
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Location = new System.Drawing.Point(708, 399);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(90, 23);
+            this.btnCerrarSesion.TabIndex = 19;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnVerificarConexion
+            // 
+            this.btnVerificarConexion.Location = new System.Drawing.Point(708, 326);
+            this.btnVerificarConexion.Name = "btnVerificarConexion";
+            this.btnVerificarConexion.Size = new System.Drawing.Size(90, 58);
+            this.btnVerificarConexion.TabIndex = 20;
+            this.btnVerificarConexion.Text = "Verificar Conexión Base de Datos";
+            this.btnVerificarConexion.UseVisualStyleBackColor = true;
+            this.btnVerificarConexion.Click += new System.EventHandler(this.btnVerificarConexion_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 455);
+            this.ClientSize = new System.Drawing.Size(819, 455);
             this.Controls.Add(this.tabControl1);
             this.Name = "AdminForm";
             this.Text = "AdminForm";
@@ -1255,7 +1254,7 @@
         private System.Windows.Forms.Button btnModificarMascota;
         private System.Windows.Forms.Button btnIngresarMascota;
         private System.Windows.Forms.GroupBox groupBoxMascotaInfo;
-        private System.Windows.Forms.ComboBox cmbDueno;
+        private System.Windows.Forms.ComboBox cmbDueño;
         private System.Windows.Forms.Label lblDueño;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label lblCastrado;
@@ -1287,10 +1286,6 @@
         private System.Windows.Forms.GroupBox groupBoxProductosServicios;
         private System.Windows.Forms.Button btnActualizarProductos;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadStock;
         private System.Windows.Forms.TabPage tabCitas;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -1333,5 +1328,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnVerificarConexion;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }
