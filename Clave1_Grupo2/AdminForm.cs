@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -14,33 +15,42 @@ namespace Clave1_Grupo2
 {
     public partial class AdminForm : Form
     {
+        MySqlConnection connection = new MySqlConnection("Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;");
+        private string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
         private List<Mascota> listaMascotas = new List<Mascota>();
         private int idDuenoSeleccionado = -1;
         private bool enModoBusqueda = false;
         private List<Cliente> listaClientes = new List<Cliente>();
         private Timer timer;
+        private FacturacionDB facturacionDB;
+        private Cita cita;
+        private int idClienteSeleccionado = -1;
 
         public AdminForm()
         {
             InitializeComponent();
+            string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
+            facturacionDB = new FacturacionDB(connectionString);
+            cita = new Cita(connectionString);
+
             CargarClientes();
             CargarClientesMascotas();
             BloquearControles();
-            cmbDueño.Enabled = true; // Mantener el ComboBox habilitado
+            cmbDueño.Enabled = true;
             CargarClientesMascotas();
             dgvClientes.SelectionChanged += DgvClientes_SelectionChanged;
-
-            // Deshabilitar todos los campos de entrada por defecto
             DeshabilitarCampos();
-
-
             cmbSexo.Items.Add("Masculino");
             cmbSexo.Items.Add("Femenino");
-
-            // Deshabilitar el ComboBox de sexo para que no sea editable
             cmbSexo.Enabled = false;
+            CargarClientesCita();
+            ActualizarDataGridView();
+            LoadData();
         }
-
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+            CargarClientesCita();
+        }
         private void CargarClientes()
         {
             string query = "SELECT * FROM clientes";
@@ -171,8 +181,6 @@ namespace Clave1_Grupo2
                 txtApellido.Clear();
             }
         }
-
-        // Evento del botón Modificar Cliente
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
             if (dgvClientes.SelectedRows.Count > 0)
@@ -274,9 +282,6 @@ namespace Clave1_Grupo2
             }
         }
         //Terminar sobre clientes
-
-
-
 
 
         //Inicia Mascotas
@@ -426,7 +431,7 @@ namespace Clave1_Grupo2
             }
         }
 
-            private void dgvMascotas_SelectionChanged(object sender, EventArgs e)
+        private void dgvMascotas_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvMascotas.SelectedRows.Count > 0)
             {
@@ -436,7 +441,6 @@ namespace Clave1_Grupo2
                 {
                     int mascotaId = Convert.ToInt32(cellValue);
 
-                    // Aquí debes obtener la lista de mascotas desde tu fuente de datos
                     Mascota mascotaSeleccionada = listaMascotas.FirstOrDefault(m => m.IdMascotas == mascotaId);
 
                     if (mascotaSeleccionada != null)
@@ -612,6 +616,8 @@ namespace Clave1_Grupo2
             Application.Exit();
         }
 
+        //Iniciar Pestaña de ProductosStock
+
         private void btnActualizarProductos_Click(object sender, EventArgs e)
         {
             try
@@ -621,7 +627,7 @@ namespace Clave1_Grupo2
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM inventario"; 
+                    string query = "SELECT * FROM inventario";
 
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection))
                     {
@@ -634,6 +640,150 @@ namespace Clave1_Grupo2
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+        //Terminar lo de productosStock
+
+
+        //Inicia pestaña Facturacion
+        private void btnConfirmarPago_Click(object sender, EventArgs e)
+        {
+            string servicioPrestado = cmbServicioPrestado.SelectedItem.ToString();
+            string metodoPago = cmbMetodoPago.SelectedItem.ToString();
+            decimal monto = decimal.Parse(txtMonto.Text);
+
+            facturacionDB.InsertarFacturacion(servicioPrestado, metodoPago, monto);
+
+            LoadData();
+            ClearFields();
+        }
+
+        private void LoadData()
+        {
+            try
+            {
+                DataTable table = facturacionDB.ObtenerFacturaciones();
+                dgvFacturacion.DataSource = table;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void ClearFields()
+        {
+            cmbServicioPrestado.SelectedIndex = -1;
+            cmbMetodoPago.SelectedIndex = -1;
+            txtMonto.Clear();
+        }
+
+        //Finaliza pestaña Facturacion
+
+        //Inicia pestaña citas
+        private void CargarClientesCita()
+        {
+            cita.CargarClientesCita(cmbDueñoCita);
+        }
+
+        private void CargarMascotasCita(int idCliente)
+        {
+            cmbMascotaCita.Items.Clear();
+            cita.CargarMascotasCita(idCliente, cmbMascotaCita);
+        }
+
+        private void CargarHorarios()
+        {
+            DateTime fechaSeleccionada = dtpFechaCita.Value;
+            cmbHorarioCita.Items.Clear();
+
+            List<string> horarios = cita.CargarHorarios(fechaSeleccionada);
+            foreach (string hora in horarios)
+            {
+                cmbHorarioCita.Items.Add(hora);
+            }
+        }
+        private void btnAgendarCita_Click(object sender, EventArgs e)
+        {
+            if (cmbDueñoCita.SelectedItem != null && cmbMascotaCita.SelectedItem != null && cmbHorarioCita.SelectedItem != null)
+            {
+                int idCliente = ((Cliente)cmbDueñoCita.SelectedItem).IdCliente;
+                int idMascota = ((Mascota)cmbMascotaCita.SelectedItem).IdMascotas;
+                DateTime fecha = dtpFechaCita.Value;
+                TimeSpan hora = TimeSpan.Parse(cmbHorarioCita.SelectedItem.ToString());
+
+                cita.AgendarCita(idCliente, idMascota, fecha, hora);
+                ActualizarDataGridView();
+                LimpiarCampos();
+            }
+            else
+            {
+                MessageBox.Show("Por favor, complete todos los campos para agendar la cita.");
+            }
+        }
+
+        private void btnModificarCita_Click(object sender, EventArgs e)
+        {
+            int idCita = ObtenerIdCitaSeleccionada();
+            if (idCita != -1)
+            {
+                DateTime nuevaFecha = dtpFechaCita.Value;
+                TimeSpan nuevaHora = TimeSpan.Parse(cmbHorarioCita.SelectedItem.ToString());
+
+                cita.ModificarCita(idCita, nuevaFecha, nuevaHora);
+                ActualizarDataGridView();
+                LimpiarCampos();
+            }
+        }
+
+        private void btnCancelarCita_Click(object sender, EventArgs e)
+        {
+            int idCita = ObtenerIdCitaSeleccionada();
+            cita.CancelarCita(idCita);
+
+            MessageBox.Show("Su cita ha sido cancelada.");
+            ActualizarDataGridView();
+            LimpiarCampos();
+        }
+        private void ActualizarDataGridView()
+        {
+            dgvCitas.DataSource = cita.ObtenerCitas();
+        }
+        private void cmbDueñoCita_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbDueñoCita.SelectedItem != null)
+            {
+                Cliente clienteSeleccionado = (Cliente)cmbDueñoCita.SelectedItem;
+                idClienteSeleccionado = clienteSeleccionado.IdCliente;
+
+                // Cargar nombres de las mascotas asociadas al cliente seleccionado
+                CargarMascotasCita(idClienteSeleccionado);
+            }
+        }
+
+        private void dtpFechaCita_ValueChanged(object sender, EventArgs e)
+        {
+            CargarHorarios();
+        }
+        private void LimpiarCampos()
+        {
+            cmbDueñoCita.SelectedIndex = -1;
+            cmbMascotaCita.SelectedIndex = -1;
+            dtpFechaCita.Value = DateTime.Now;
+            cmbHorarioCita.Items.Clear();
+        }
+
+        private int ObtenerIdCitaSeleccionada()
+        {
+            if (dgvCitas.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvCitas.SelectedRows[0];
+                return Convert.ToInt32(selectedRow.Cells["idCita"].Value);
+            }
+            else
+            {
+                MessageBox.Show("No hay ninguna cita seleccionada.");
+                return -1;
             }
         }
     }

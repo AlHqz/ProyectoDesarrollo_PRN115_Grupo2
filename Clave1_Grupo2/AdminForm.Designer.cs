@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCliente = new System.Windows.Forms.TabPage();
+            this.btnVerificarConexion = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.groupBoxClienteInfo = new System.Windows.Forms.GroupBox();
@@ -85,20 +87,16 @@
             this.cmbServicioPrestado = new System.Windows.Forms.ComboBox();
             this.lblServicioPrestado = new System.Windows.Forms.Label();
             this.tabProductosServicios = new System.Windows.Forms.TabPage();
+            this.btnActualizarProductos = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBoxProductosServicios = new System.Windows.Forms.GroupBox();
-            this.btnActualizarProductos = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.tabCitas = new System.Windows.Forms.TabPage();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NombreMascota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCitas = new System.Windows.Forms.DataGridView();
             this.gbCitas = new System.Windows.Forms.GroupBox();
             this.cmbMascotaCita = new System.Windows.Forms.ComboBox();
-            this.cmbDuenoCita = new System.Windows.Forms.ComboBox();
+            this.cmbDueñoCita = new System.Windows.Forms.ComboBox();
             this.lblDueno = new System.Windows.Forms.Label();
             this.btnCancelarCita = new System.Windows.Forms.Button();
             this.btnAgendarCita = new System.Windows.Forms.Button();
@@ -131,8 +129,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
-            this.btnVerificarConexion = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -152,7 +148,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.tabCitas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             this.gbCitas.SuspendLayout();
             this.tabUsuarios.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -186,6 +182,26 @@
             this.tabCliente.TabIndex = 0;
             this.tabCliente.Text = "Cliente";
             this.tabCliente.UseVisualStyleBackColor = true;
+            // 
+            // btnVerificarConexion
+            // 
+            this.btnVerificarConexion.Location = new System.Drawing.Point(708, 326);
+            this.btnVerificarConexion.Name = "btnVerificarConexion";
+            this.btnVerificarConexion.Size = new System.Drawing.Size(90, 58);
+            this.btnVerificarConexion.TabIndex = 20;
+            this.btnVerificarConexion.Text = "Verificar Conexión Base de Datos";
+            this.btnVerificarConexion.UseVisualStyleBackColor = true;
+            this.btnVerificarConexion.Click += new System.EventHandler(this.btnVerificarConexion_Click);
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Location = new System.Drawing.Point(708, 399);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(90, 23);
+            this.btnCerrarSesion.TabIndex = 19;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // pictureBox3
             // 
@@ -637,7 +653,7 @@
             this.dgvFacturacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFacturacion.Location = new System.Drawing.Point(3, 148);
             this.dgvFacturacion.Name = "dgvFacturacion";
-            this.dgvFacturacion.Size = new System.Drawing.Size(626, 274);
+            this.dgvFacturacion.Size = new System.Drawing.Size(454, 274);
             this.dgvFacturacion.TabIndex = 9;
             // 
             // groupBoxFacturacion
@@ -664,6 +680,7 @@
             this.btnConfirmarPago.TabIndex = 6;
             this.btnConfirmarPago.Text = "Confirmar Pago";
             this.btnConfirmarPago.UseVisualStyleBackColor = true;
+            this.btnConfirmarPago.Click += new System.EventHandler(this.btnConfirmarPago_Click);
             // 
             // txtMonto
             // 
@@ -737,6 +754,16 @@
             this.tabProductosServicios.Text = "Producto/Servicios";
             this.tabProductosServicios.UseVisualStyleBackColor = true;
             // 
+            // btnActualizarProductos
+            // 
+            this.btnActualizarProductos.Location = new System.Drawing.Point(575, 201);
+            this.btnActualizarProductos.Name = "btnActualizarProductos";
+            this.btnActualizarProductos.Size = new System.Drawing.Size(113, 23);
+            this.btnActualizarProductos.TabIndex = 1;
+            this.btnActualizarProductos.Text = "Actualizar Inventario";
+            this.btnActualizarProductos.UseVisualStyleBackColor = true;
+            this.btnActualizarProductos.Click += new System.EventHandler(this.btnActualizarProductos_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Clave1_Grupo2.Properties.Resources.perro_para_productos_y_servicios;
@@ -757,16 +784,6 @@
             this.groupBoxProductosServicios.TabStop = false;
             this.groupBoxProductosServicios.Text = "Inventario de Productos y Servicios";
             // 
-            // btnActualizarProductos
-            // 
-            this.btnActualizarProductos.Location = new System.Drawing.Point(575, 201);
-            this.btnActualizarProductos.Name = "btnActualizarProductos";
-            this.btnActualizarProductos.Size = new System.Drawing.Size(113, 23);
-            this.btnActualizarProductos.TabIndex = 1;
-            this.btnActualizarProductos.Text = "Actualizar Inventario";
-            this.btnActualizarProductos.UseVisualStyleBackColor = true;
-            this.btnActualizarProductos.Click += new System.EventHandler(this.btnActualizarProductos_Click);
-            // 
             // dgvProductos
             // 
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -778,7 +795,7 @@
             // tabCitas
             // 
             this.tabCitas.Controls.Add(this.pictureBox5);
-            this.tabCitas.Controls.Add(this.dataGridView1);
+            this.tabCitas.Controls.Add(this.dgvCitas);
             this.tabCitas.Controls.Add(this.gbCitas);
             this.tabCitas.Location = new System.Drawing.Point(4, 22);
             this.tabCitas.Name = "tabCitas";
@@ -797,43 +814,18 @@
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
             // 
-            // dataGridView1
+            // dgvCitas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NombreMascota,
-            this.FechaCita,
-            this.Horario,
-            this.Estado});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 207);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 209);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // NombreMascota
-            // 
-            this.NombreMascota.HeaderText = "Nombre de Mascota";
-            this.NombreMascota.Name = "NombreMascota";
-            // 
-            // FechaCita
-            // 
-            this.FechaCita.HeaderText = "Fecha de la Cita";
-            this.FechaCita.Name = "FechaCita";
-            // 
-            // Horario
-            // 
-            this.Horario.HeaderText = "Horario";
-            this.Horario.Name = "Horario";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
+            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCitas.Location = new System.Drawing.Point(3, 207);
+            this.dgvCitas.Name = "dgvCitas";
+            this.dgvCitas.Size = new System.Drawing.Size(443, 209);
+            this.dgvCitas.TabIndex = 1;
             // 
             // gbCitas
             // 
             this.gbCitas.Controls.Add(this.cmbMascotaCita);
-            this.gbCitas.Controls.Add(this.cmbDuenoCita);
+            this.gbCitas.Controls.Add(this.cmbDueñoCita);
             this.gbCitas.Controls.Add(this.lblDueno);
             this.gbCitas.Controls.Add(this.btnCancelarCita);
             this.gbCitas.Controls.Add(this.btnAgendarCita);
@@ -858,13 +850,13 @@
             this.cmbMascotaCita.Size = new System.Drawing.Size(121, 21);
             this.cmbMascotaCita.TabIndex = 19;
             // 
-            // cmbDuenoCita
+            // cmbDueñoCita
             // 
-            this.cmbDuenoCita.FormattingEnabled = true;
-            this.cmbDuenoCita.Location = new System.Drawing.Point(110, 26);
-            this.cmbDuenoCita.Name = "cmbDuenoCita";
-            this.cmbDuenoCita.Size = new System.Drawing.Size(121, 21);
-            this.cmbDuenoCita.TabIndex = 18;
+            this.cmbDueñoCita.FormattingEnabled = true;
+            this.cmbDueñoCita.Location = new System.Drawing.Point(110, 26);
+            this.cmbDueñoCita.Name = "cmbDueñoCita";
+            this.cmbDueñoCita.Size = new System.Drawing.Size(121, 21);
+            this.cmbDueñoCita.TabIndex = 18;
             // 
             // lblDueno
             // 
@@ -883,6 +875,7 @@
             this.btnCancelarCita.TabIndex = 16;
             this.btnCancelarCita.Text = "Cancelar";
             this.btnCancelarCita.UseVisualStyleBackColor = true;
+            this.btnCancelarCita.Click += new System.EventHandler(this.btnCancelarCita_Click);
             // 
             // btnAgendarCita
             // 
@@ -892,6 +885,7 @@
             this.btnAgendarCita.TabIndex = 15;
             this.btnAgendarCita.Text = "Agendar";
             this.btnAgendarCita.UseVisualStyleBackColor = true;
+            this.btnAgendarCita.Click += new System.EventHandler(this.btnAgendarCita_Click);
             // 
             // btnModificarCita
             // 
@@ -901,15 +895,11 @@
             this.btnModificarCita.TabIndex = 14;
             this.btnModificarCita.Text = "Modificar";
             this.btnModificarCita.UseVisualStyleBackColor = true;
+            this.btnModificarCita.Click += new System.EventHandler(this.btnModificarCita_Click);
             // 
             // cmbHorarioCita
             // 
             this.cmbHorarioCita.FormattingEnabled = true;
-            this.cmbHorarioCita.Items.AddRange(new object[] {
-            "10:00 AM",
-            "11:00 AM",
-            "12:00 AM",
-            "2:00 PM"});
             this.cmbHorarioCita.Location = new System.Drawing.Point(110, 134);
             this.cmbHorarioCita.Name = "cmbHorarioCita";
             this.cmbHorarioCita.Size = new System.Drawing.Size(121, 21);
@@ -1163,26 +1153,6 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Nombre:";
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Location = new System.Drawing.Point(708, 399);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(90, 23);
-            this.btnCerrarSesion.TabIndex = 19;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // btnVerificarConexion
-            // 
-            this.btnVerificarConexion.Location = new System.Drawing.Point(708, 326);
-            this.btnVerificarConexion.Name = "btnVerificarConexion";
-            this.btnVerificarConexion.Size = new System.Drawing.Size(90, 58);
-            this.btnVerificarConexion.TabIndex = 20;
-            this.btnVerificarConexion.Text = "Verificar Conexión Base de Datos";
-            this.btnVerificarConexion.UseVisualStyleBackColor = true;
-            this.btnVerificarConexion.Click += new System.EventHandler(this.btnVerificarConexion_Click);
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1213,7 +1183,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.tabCitas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
             this.gbCitas.ResumeLayout(false);
             this.gbCitas.PerformLayout();
             this.tabUsuarios.ResumeLayout(false);
@@ -1288,14 +1258,10 @@
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.TabPage tabCitas;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreMascota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCita;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Horario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridView dgvCitas;
         private System.Windows.Forms.GroupBox gbCitas;
         private System.Windows.Forms.ComboBox cmbMascotaCita;
-        private System.Windows.Forms.ComboBox cmbDuenoCita;
+        private System.Windows.Forms.ComboBox cmbDueñoCita;
         private System.Windows.Forms.Label lblDueno;
         private System.Windows.Forms.Button btnCancelarCita;
         private System.Windows.Forms.Button btnAgendarCita;

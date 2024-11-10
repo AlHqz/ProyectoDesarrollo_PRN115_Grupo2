@@ -16,5 +16,9 @@ namespace Clave1_Grupo2
         public string Direccion { get; set; }
         public string Email { get; set; }
         public string Sexo { get; set; }
+        public override string ToString()
+        {
+            return $"{Nombre} {Apellido}";
+        }
     }
 }

@@ -104,6 +104,7 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cita.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteForm.cs">
       <SubType>Form</SubType>
@@ -111,6 +112,7 @@
     <Compile Include="ClienteForm.Designer.cs">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturacion.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -33,7 +33,7 @@ namespace Clave1_Grupo2
         }
         public override string ToString()
         {
-            return $"{NombreMascota} ({Especie}), Raza: {Raza}, Edad: {EdadEnMeses} meses, Peso: {Peso} kg, Castrado: {(Castrado ? "Sí" : "No")}";
+            return NombreMascota; // Solo muestra el nombre de la mascota
         }
     }
 }
