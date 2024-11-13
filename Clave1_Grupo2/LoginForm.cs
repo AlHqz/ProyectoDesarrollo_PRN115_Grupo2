@@ -17,7 +17,7 @@ namespace Clave1_Grupo2
         {
             InitializeComponent();
         }
-
+        //LoginForm
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             string usuario = txtUsuarioLogin.Text.Trim();
