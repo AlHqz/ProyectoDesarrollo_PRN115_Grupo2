@@ -307,6 +307,13 @@ namespace Clave1_Grupo2
             dtpFechaAplicacion.Value = DateTime.Now;
             dtpProximaFechaAplicacion.Value = DateTime.Now;
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Cerrado de sesión con éxito.");
+            Application.Exit();
+        }
     }
 
 }

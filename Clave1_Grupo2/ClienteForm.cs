@@ -537,7 +537,7 @@ namespace Clave1_Grupo2
                         int idHorario = reader.GetInt32("idHorario");
                         TimeSpan hora = reader.GetTimeSpan("Hora");
 
-                        // Convertir TimeSpan a string con formato "HH:mm"
+
                         string horaFormatted = hora.ToString(@"hh\:mm");
 
                         cmbHorarioCita.Items.Add(new { Id = idHorario, Hora = horaFormatted });
@@ -567,9 +567,9 @@ namespace Clave1_Grupo2
 
             dynamic selectedMascota = cmbNombreMascota.SelectedItem;
             int idMascota = selectedMascota.Id;
-            DateTime fechaCita = dtpFechaCita.Value.Date; // Solo la fecha
+            DateTime fechaCita = dtpFechaCita.Value.Date; 
             dynamic horarioSeleccionado = cmbHorarioCita.SelectedItem;
-            string horaCita = horarioSeleccionado.Hora; // Horario en formato string "HH:mm"
+            string horaCita = horarioSeleccionado.Hora; 
             string tipoServicio = cmbTipoServicio.SelectedItem.ToString();
 
             string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
@@ -606,10 +606,10 @@ namespace Clave1_Grupo2
                     return;
                 }
 
-                // Obtén el horario seleccionado y otros detalles
+
                 var horarioSeleccionado = (dynamic)cmbHorarioCita.SelectedItem;
                 int idHorario = horarioSeleccionado.Id;
-                string horaSeleccionada = horarioSeleccionado.Hora;  // Asegúrate de que aquí obtienes la hora como string o TimeSpan
+                string horaSeleccionada = horarioSeleccionado.Hora;  
                 DateTime fechaCita = dtpFechaCita.Value;
                 string tipoServicio = cmbTipoServicio.Text;
 
@@ -642,7 +642,7 @@ namespace Clave1_Grupo2
                         cmd.Parameters.AddWithValue("@idClientes", idClientes);
                         cmd.Parameters.AddWithValue("@idMascotas", idMascotaSeleccionada);
                         cmd.Parameters.AddWithValue("@Fecha", fechaCita);
-                        cmd.Parameters.AddWithValue("@Hora", horaSeleccionada);  // Guardamos la hora específica seleccionada
+                        cmd.Parameters.AddWithValue("@Hora", horaSeleccionada);  
                         cmd.Parameters.AddWithValue("@TipoServicio", tipoServicio);
 
                         cmd.ExecuteNonQuery();
@@ -676,19 +676,19 @@ namespace Clave1_Grupo2
 
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        dgvCitas.Rows.Clear(); // Limpiar filas anteriores
+                        dgvCitas.Rows.Clear(); 
 
                         while (reader.Read())
                         {
-                            int idCita = reader.GetInt32("idCita"); // Asegúrate de que esta columna exista en tu consulta
+                            int idCita = reader.GetInt32("idCita"); 
                             string nombreMascota = reader.GetString("NombreMascota");
                             DateTime fecha = reader.GetDateTime("Fecha");
-                            TimeSpan hora = reader.GetTimeSpan("Hora"); // Obtener el valor como TimeSpan
-                            string horaStr = hora.ToString(@"hh\:mm"); // Formato de hora
+                            TimeSpan hora = reader.GetTimeSpan("Hora"); 
+                            string horaStr = hora.ToString(@"hh\:mm"); 
                             string estado = reader.GetString("Estado");
                             string tipoServicio = reader.GetString("TipoServicio");
 
-                            // Agregar los datos en el orden correcto, incluyendo idCita
+  
                             dgvCitas.Rows.Add(idCita, nombreMascota, fecha.ToShortDateString(), horaStr, estado, tipoServicio);
                         }
                     }
@@ -697,22 +697,26 @@ namespace Clave1_Grupo2
         }
         private void dgvCitas_SelectionChanged(object sender, EventArgs e)
         {
-            // Verifica que haya una fila seleccionada
+
             if (dgvCitas.CurrentRow != null)
             {
-                // Selecciona la fila actual
                 DataGridViewRow filaSeleccionada = dgvCitas.CurrentRow;
-
-                // Asigna los valores de la fila a los controles correspondientes
-                cmbNombreMascota.Text = filaSeleccionada.Cells["NombreMascota"].Value.ToString(); // Asegúrate de que el nombre de la columna sea correcto
-                dtpFechaCita.Value = Convert.ToDateTime(filaSeleccionada.Cells["Fecha"].Value); // Asegúrate de que el nombre de la columna sea correcto
-                cmbHorarioCita.Text = filaSeleccionada.Cells["Hora"].Value.ToString(); // Asegúrate de que el nombre de la columna sea correcto
-                cmbTipoServicio.Text = filaSeleccionada.Cells["TipoServicio"].Value.ToString(); // Asegúrate de que el nombre de la columna sea correcto
+                cmbNombreMascota.Text = filaSeleccionada.Cells["NombreMascota"].Value.ToString(); 
+                dtpFechaCita.Value = Convert.ToDateTime(filaSeleccionada.Cells["Fecha"].Value); 
+                cmbHorarioCita.Text = filaSeleccionada.Cells["Hora"].Value.ToString(); 
+                cmbTipoServicio.Text = filaSeleccionada.Cells["TipoServicio"].Value.ToString(); 
 
                 // Aquí se puede obtener el ID de la cita seleccionada
-                idCitaSeleccionada = Convert.ToInt32(filaSeleccionada.Cells["idCita"].Value); // Asegúrate de que el nombre de la columna sea correcto
+                idCitaSeleccionada = Convert.ToInt32(filaSeleccionada.Cells["idCita"].Value); 
 
             }
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Cerrado de sesión con éxito.");
+            Application.Exit();
         }
     }
 }

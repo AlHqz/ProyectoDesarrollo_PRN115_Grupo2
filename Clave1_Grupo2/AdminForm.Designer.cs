@@ -114,20 +114,20 @@
             this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.lblTipoUsuario = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtUsuarioInfo = new System.Windows.Forms.TextBox();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmailInfo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDireccionInfo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTelefonoInfo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbSexoInfo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtApellidoInfo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtNombreInfo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabCliente.SuspendLayout();
@@ -957,20 +957,20 @@
             this.groupBox1.Controls.Add(this.cmbTipoUsuario);
             this.groupBox1.Controls.Add(this.lblTipoUsuario);
             this.groupBox1.Controls.Add(this.txtContraseña);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.txtUsuarioInfo);
             this.groupBox1.Controls.Add(this.lblContraseña);
             this.groupBox1.Controls.Add(this.lblUsuario);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtEmailInfo);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtDireccionInfo);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtTelefonoInfo);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbSexoInfo);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.txtApellidoInfo);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.txtNombreInfo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(8, 3);
             this.groupBox1.Name = "groupBox1";
@@ -1003,10 +1003,15 @@
             this.btnRegistrar.TabIndex = 18;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // cmbTipoUsuario
             // 
             this.cmbTipoUsuario.FormattingEnabled = true;
+            this.cmbTipoUsuario.Items.AddRange(new object[] {
+            "Admin",
+            "Cliente",
+            "Veterinario"});
             this.cmbTipoUsuario.Location = new System.Drawing.Point(83, 214);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
             this.cmbTipoUsuario.Size = new System.Drawing.Size(121, 21);
@@ -1028,12 +1033,12 @@
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
             this.txtContraseña.TabIndex = 15;
             // 
-            // textBox6
+            // txtUsuarioInfo
             // 
-            this.textBox6.Location = new System.Drawing.Point(54, 166);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 14;
+            this.txtUsuarioInfo.Location = new System.Drawing.Point(54, 166);
+            this.txtUsuarioInfo.Name = "txtUsuarioInfo";
+            this.txtUsuarioInfo.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuarioInfo.TabIndex = 14;
             // 
             // lblContraseña
             // 
@@ -1053,12 +1058,12 @@
             this.lblUsuario.TabIndex = 12;
             this.lblUsuario.Text = "Usuario:";
             // 
-            // textBox1
+            // txtEmailInfo
             // 
-            this.textBox1.Location = new System.Drawing.Point(54, 142);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 11;
+            this.txtEmailInfo.Location = new System.Drawing.Point(54, 142);
+            this.txtEmailInfo.Name = "txtEmailInfo";
+            this.txtEmailInfo.Size = new System.Drawing.Size(100, 20);
+            this.txtEmailInfo.TabIndex = 11;
             // 
             // label1
             // 
@@ -1069,12 +1074,12 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Email:";
             // 
-            // textBox2
+            // txtDireccionInfo
             // 
-            this.textBox2.Location = new System.Drawing.Point(54, 117);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.txtDireccionInfo.Location = new System.Drawing.Point(54, 117);
+            this.txtDireccionInfo.Name = "txtDireccionInfo";
+            this.txtDireccionInfo.Size = new System.Drawing.Size(100, 20);
+            this.txtDireccionInfo.TabIndex = 9;
             // 
             // label2
             // 
@@ -1085,12 +1090,12 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Dirección:";
             // 
-            // textBox3
+            // txtTelefonoInfo
             // 
-            this.textBox3.Location = new System.Drawing.Point(54, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.txtTelefonoInfo.Location = new System.Drawing.Point(54, 93);
+            this.txtTelefonoInfo.Name = "txtTelefonoInfo";
+            this.txtTelefonoInfo.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefonoInfo.TabIndex = 7;
             // 
             // label3
             // 
@@ -1101,16 +1106,16 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Teléfono:";
             // 
-            // comboBox1
+            // cmbSexoInfo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbSexoInfo.FormattingEnabled = true;
+            this.cmbSexoInfo.Items.AddRange(new object[] {
             "Masculino",
             "Femenino"});
-            this.comboBox1.Location = new System.Drawing.Point(53, 67);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
+            this.cmbSexoInfo.Location = new System.Drawing.Point(53, 67);
+            this.cmbSexoInfo.Name = "cmbSexoInfo";
+            this.cmbSexoInfo.Size = new System.Drawing.Size(121, 21);
+            this.cmbSexoInfo.TabIndex = 5;
             // 
             // label4
             // 
@@ -1121,12 +1126,12 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Sexo:";
             // 
-            // textBox4
+            // txtApellidoInfo
             // 
-            this.textBox4.Location = new System.Drawing.Point(53, 41);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.txtApellidoInfo.Location = new System.Drawing.Point(53, 41);
+            this.txtApellidoInfo.Name = "txtApellidoInfo";
+            this.txtApellidoInfo.Size = new System.Drawing.Size(100, 20);
+            this.txtApellidoInfo.TabIndex = 3;
             // 
             // label5
             // 
@@ -1137,12 +1142,12 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Apellido:";
             // 
-            // textBox5
+            // txtNombreInfo
             // 
-            this.textBox5.Location = new System.Drawing.Point(52, 17);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 1;
+            this.txtNombreInfo.Location = new System.Drawing.Point(52, 17);
+            this.txtNombreInfo.Name = "txtNombreInfo";
+            this.txtNombreInfo.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreInfo.TabIndex = 1;
             // 
             // label6
             // 
@@ -1279,20 +1284,20 @@
         private System.Windows.Forms.ComboBox cmbTipoUsuario;
         private System.Windows.Forms.Label lblTipoUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtUsuarioInfo;
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmailInfo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDireccionInfo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTelefonoInfo;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbSexoInfo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtApellidoInfo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtNombreInfo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnVerificarConexion;
         private System.Windows.Forms.Button btnCerrarSesion;

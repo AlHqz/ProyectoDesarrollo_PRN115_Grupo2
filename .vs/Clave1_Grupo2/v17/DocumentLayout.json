@@ -3,12 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|c:\\users\\pc\\source\\repos\\alhqz\\proyectodesarrollo_prn115_grupo2\\clave1_grupo2\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|c:\\users\\pc\\source\\repos\\alhqz\\proyectodesarrollo_prn115_grupo2\\clave1_grupo2\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|c:\\users\\pc\\source\\repos\\alhqz\\proyectodesarrollo_prn115_grupo2\\clave1_grupo2\\carritoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\carritoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\veterinarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\veterinarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\clienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\clienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\veterinarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\veterinarioform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\mascota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\mascota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\facturacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\facturacion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\clienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\clienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\citaitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\citaitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\clave1_grupo2\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8B9F67C5-6AFF-47D4-ABFE-A41FB8C35F3F}|Clave1_Grupo2\\Clave1_Grupo2.csproj|solutionrelative:clave1_grupo2\\adminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +73,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 342,
+          "DockedHeight": 19,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -31,12 +87,24 @@
           ]
         },
         {
-          "DockedHeight": 116,
-          "SelectedChildIndex": 1,
+          "DockedHeight": 309,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VeterinarioForm.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\VeterinarioForm.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\VeterinarioForm.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\VeterinarioForm.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\VeterinarioForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:28:22.626Z"
             },
             {
               "$type": "Document",
@@ -46,28 +114,181 @@
               "RelativeDocumentMoniker": "Clave1_Grupo2\\LoginForm.cs",
               "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\LoginForm.cs",
               "RelativeToolTip": "Clave1_Grupo2\\LoginForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAATAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T05:43:59.582Z",
+              "WhenOpened": "2024-11-13T20:28:19.626Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClienteForm.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\ClienteForm.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\ClienteForm.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\ClienteForm.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\ClienteForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:28:17.065Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminForm.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\AdminForm.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\AdminForm.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\AdminForm.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\AdminForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:28:13.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VeterinarioForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\VeterinarioForm.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\VeterinarioForm.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\VeterinarioForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Clave1_Grupo2\\VeterinarioForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:28:10.096Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Program.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\Program.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Program.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:28:08.677Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CarritoItem.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\CarritoItem.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\CarritoItem.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\CarritoItem.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\CarritoItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:27:52.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Producto.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\Producto.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Producto.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\Producto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:28:07.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Mascota.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Mascota.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\Mascota.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Mascota.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\Mascota.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:28:00.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\LoginForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Clave1_Grupo2\\LoginForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:27:59.911Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Facturacion.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Facturacion.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\Facturacion.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Facturacion.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\Facturacion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:27:58.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ClienteForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\ClienteForm.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\ClienteForm.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\ClienteForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Clave1_Grupo2\\ClienteForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:27:57.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Cliente.cs",
               "RelativeDocumentMoniker": "Clave1_Grupo2\\Cliente.cs",
               "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Cliente.cs",
               "RelativeToolTip": "Clave1_Grupo2\\Cliente.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAYwBAAAAApAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T07:32:13.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T20:27:56.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CitaItem.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\CitaItem.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\CitaItem.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\CitaItem.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\CitaItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:27:55.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Cita.cs",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Cita.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\Cita.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\Cita.cs",
+              "RelativeToolTip": "Clave1_Grupo2\\Cita.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:27:54.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AdminForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\AdminForm.cs",
+              "RelativeDocumentMoniker": "Clave1_Grupo2\\AdminForm.cs",
+              "ToolTip": "C:\\Users\\Pc\\source\\repos\\AlHqz\\ProyectoDesarrollo_PRN115_Grupo2\\Clave1_Grupo2\\AdminForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Clave1_Grupo2\\AdminForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T06:26:11.167Z"
             }
           ]
         },
         {
-          "DockedHeight": 36,
+          "DockedHeight": 166,
           "SelectedChildIndex": -1,
           "Children": [
             {

@@ -63,6 +63,7 @@
             this.lblFechaAplicacion = new System.Windows.Forms.Label();
             this.txtNombreVacuna = new System.Windows.Forms.TextBox();
             this.lblNombreVacuna = new System.Windows.Forms.Label();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.tabControlVeterinario.SuspendLayout();
             this.tabMascota.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).BeginInit();
@@ -90,6 +91,7 @@
             // 
             // tabMascota
             // 
+            this.tabMascota.Controls.Add(this.btnCerrarSesion);
             this.tabMascota.Controls.Add(this.dgvMascotas);
             this.tabMascota.Controls.Add(this.groupBoxMascotaInfo);
             this.tabMascota.Location = new System.Drawing.Point(4, 22);
@@ -410,6 +412,16 @@
             this.lblNombreVacuna.TabIndex = 0;
             this.lblNombreVacuna.Text = "Nombre de Vacuna:";
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Location = new System.Drawing.Point(695, 35);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(90, 23);
+            this.btnCerrarSesion.TabIndex = 21;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // VeterinarioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,5 +487,6 @@
         private System.Windows.Forms.Label lblNombreVacuna;
         private System.Windows.Forms.ComboBox cmbNombreClienteMascota;
         private System.Windows.Forms.ComboBox cmbBuscarMascota;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }

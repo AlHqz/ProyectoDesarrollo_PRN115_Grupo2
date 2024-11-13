@@ -92,6 +92,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabCitas = new System.Windows.Forms.TabPage();
             this.dgvCitas = new System.Windows.Forms.DataGridView();
+            this.idCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreMascota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbCitas = new System.Windows.Forms.GroupBox();
             this.cmbTipoServicio = new System.Windows.Forms.ComboBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -105,11 +110,7 @@
             this.lblFechaCita = new System.Windows.Forms.Label();
             this.txtNombreMascotaCita = new System.Windows.Forms.TextBox();
             this.lblMascota = new System.Windows.Forms.Label();
-            this.idCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreMascota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.tabControlCliente.SuspendLayout();
             this.tabCliente.SuspendLayout();
             this.groupBoxClienteInfo.SuspendLayout();
@@ -143,6 +144,7 @@
             // 
             // tabCliente
             // 
+            this.tabCliente.Controls.Add(this.btnCerrarSesion);
             this.tabCliente.Controls.Add(this.groupBoxClienteInfo);
             this.tabCliente.Location = new System.Drawing.Point(4, 22);
             this.tabCliente.Name = "tabCliente";
@@ -756,6 +758,31 @@
             this.dgvCitas.Size = new System.Drawing.Size(541, 209);
             this.dgvCitas.TabIndex = 4;
             // 
+            // idCita
+            // 
+            this.idCita.HeaderText = "idCita";
+            this.idCita.Name = "idCita";
+            // 
+            // NombreMascota
+            // 
+            this.NombreMascota.HeaderText = "Nombre de Mascota";
+            this.NombreMascota.Name = "NombreMascota";
+            // 
+            // FechaCita
+            // 
+            this.FechaCita.HeaderText = "Fecha de la Cita";
+            this.FechaCita.Name = "FechaCita";
+            // 
+            // Horario
+            // 
+            this.Horario.HeaderText = "Horario";
+            this.Horario.Name = "Horario";
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
             // gbCitas
             // 
             this.gbCitas.Controls.Add(this.cmbTipoServicio);
@@ -887,30 +914,15 @@
             this.lblMascota.TabIndex = 0;
             this.lblMascota.Text = "Nombre de Mascota:";
             // 
-            // idCita
+            // btnCerrarSesion
             // 
-            this.idCita.HeaderText = "idCita";
-            this.idCita.Name = "idCita";
-            // 
-            // NombreMascota
-            // 
-            this.NombreMascota.HeaderText = "Nombre de Mascota";
-            this.NombreMascota.Name = "NombreMascota";
-            // 
-            // FechaCita
-            // 
-            this.FechaCita.HeaderText = "Fecha de la Cita";
-            this.FechaCita.Name = "FechaCita";
-            // 
-            // Horario
-            // 
-            this.Horario.HeaderText = "Horario";
-            this.Horario.Name = "Horario";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
+            this.btnCerrarSesion.Location = new System.Drawing.Point(295, 202);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(90, 23);
+            this.btnCerrarSesion.TabIndex = 20;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // ClienteForm
             // 
@@ -1030,5 +1042,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn Horario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }

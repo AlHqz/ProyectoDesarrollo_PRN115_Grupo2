@@ -15,6 +15,7 @@ namespace Clave1_Grupo2
 {
     public partial class AdminForm : Form
     {
+        private MySqlConnection connection = new MySqlConnection("Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;");
         private List<Mascota> listaMascotas = new List<Mascota>();
         private int idDuenoSeleccionado = -1;
         private bool enModoBusqueda = false;
@@ -219,26 +220,38 @@ namespace Clave1_Grupo2
             if (dgvClientes.SelectedRows.Count > 0)
             {
                 int clienteId = Convert.ToInt32(dgvClientes.SelectedRows[0].Cells["idClientes"].Value);
-                string query = "DELETE FROM clientes WHERE idClientes = @id";
                 string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
 
                 using (MySqlConnection conn = new MySqlConnection(connectionString))
                 {
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@id", clienteId);
-
                     conn.Open();
-                    cmd.ExecuteNonQuery();
+
+                    // Paso 1: Eliminar registros en la tabla `usuarios`
+                    string deleteUsuariosQuery = "DELETE FROM usuarios WHERE idClientes = @id";
+                    using (MySqlCommand cmdUsuarios = new MySqlCommand(deleteUsuariosQuery, conn))
+                    {
+                        cmdUsuarios.Parameters.AddWithValue("@id", clienteId);
+                        cmdUsuarios.ExecuteNonQuery();
+                    }
+
+                    // Paso 2: Eliminar el cliente en la tabla `clientes`
+                    string deleteClientesQuery = "DELETE FROM clientes WHERE idClientes = @id";
+                    using (MySqlCommand cmdClientes = new MySqlCommand(deleteClientesQuery, conn))
+                    {
+                        cmdClientes.Parameters.AddWithValue("@id", clienteId);
+                        cmdClientes.ExecuteNonQuery();
+                    }
+
                     conn.Close();
                 }
 
-                MessageBox.Show("Cliente eliminado correctamente.");
+                MessageBox.Show("Cliente y sus usuarios eliminados correctamente.");
                 CargarClientes();
                 DeshabilitarCampos();
             }
-        }
-        // Evento que actualiza los campos en el GroupBox cuando se selecciona un cliente en el DataGridView
-        private void DgvClientes_SelectionChanged(object sender, EventArgs e)
+            }
+            // Evento que actualiza los campos en el GroupBox cuando se selecciona un cliente en el DataGridView
+            private void DgvClientes_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvClientes.SelectedRows.Count > 0)
             {
@@ -782,6 +795,84 @@ namespace Clave1_Grupo2
                 MessageBox.Show("No hay ninguna cita seleccionada.");
                 return -1;
             }
+        }
+
+        //Pestaña usuarios
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Paso 1: Insertar los datos del cliente en la tabla 'clientes'
+                string queryCliente = "INSERT INTO clientes (nombre, apellido, sexo, telefono, direccion, email) " +
+                                      "VALUES (@nombre, @apellido, @sexo, @telefono, @direccion, @email)";
+
+                using (MySqlCommand cmd = new MySqlCommand(queryCliente, connection))
+                {
+                    cmd.Parameters.AddWithValue("@nombre", txtNombreInfo.Text);
+                    cmd.Parameters.AddWithValue("@apellido", txtApellidoInfo.Text);
+                    cmd.Parameters.AddWithValue("@sexo", cmbSexoInfo.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@telefono", txtTelefonoInfo.Text);
+                    cmd.Parameters.AddWithValue("@direccion", txtDireccionInfo.Text);
+                    cmd.Parameters.AddWithValue("@email", txtEmailInfo.Text);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                // Paso 2: Obtener el idCliente recién insertado
+                string queryGetIdCliente = "SELECT LAST_INSERT_ID()";
+                int idCliente = 0;
+                using (MySqlCommand cmd = new MySqlCommand(queryGetIdCliente, connection))
+                {
+                    connection.Open();
+                    idCliente = Convert.ToInt32(cmd.ExecuteScalar());
+                    connection.Close();
+                }
+
+                // Paso 3: Insertar los datos del usuario en la tabla 'usuarios'
+                string queryUsuario = "INSERT INTO usuarios (username, password, rol, idClientes) " +
+                                      "VALUES (@username, @password, @rol, @idClientes)";
+                
+                using (MySqlCommand cmd = new MySqlCommand(queryUsuario, connection))
+                {
+                    cmd.Parameters.AddWithValue("@username", txtUsuarioInfo.Text);
+                    cmd.Parameters.AddWithValue("@password", txtContraseña.Text); // Recuerda encriptar la contraseña si es necesario
+                    cmd.Parameters.AddWithValue("@rol", cmbTipoUsuario.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@idClientes", idCliente);
+
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                MessageBox.Show("Usuario registrado exitosamente.");
+
+                // Limpiar los campos después del registro exitoso
+                LimpiarCamposUsuarios();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error: " + ex.Message);
+                if (connection.State == System.Data.ConnectionState.Open)
+                    connection.Close();
+            }
+        }
+
+        // Función para limpiar los campos de entrada
+        private void LimpiarCamposUsuarios()
+        {
+            txtNombreInfo.Text = "";
+            txtApellidoInfo.Text = "";
+            cmbSexoInfo.SelectedIndex = -1; // Deselecciona el ComboBox
+            txtTelefonoInfo.Text = "";
+            txtDireccionInfo.Text = "";
+            txtEmailInfo.Text = "";
+            txtUsuarioInfo.Text = "";
+            txtID.Text = "";
+            txtContraseña.Text = "";
+            cmbTipoUsuario.SelectedIndex = -1; // Deselecciona el ComboBox
         }
     }
 }
