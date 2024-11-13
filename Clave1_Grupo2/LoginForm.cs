@@ -29,7 +29,6 @@ namespace Clave1_Grupo2
                 return;
             }
 
-            // Cadena de conexión (ajusta con tus credenciales de MySQL)
             string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -38,43 +37,66 @@ namespace Clave1_Grupo2
                 {
                     conn.Open();
 
-                    // Consulta SQL para verificar usuario y contraseña
-                    string query = "SELECT rol FROM usuarios WHERE username = @username AND password = @password";
+                    // Primero, validamos el usuario y obtenemos el idClientes y el rol desde la tabla usuarios
+                    string queryUsuario = "SELECT rol, idClientes FROM usuarios WHERE username = @username AND password = @password";
 
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    using (MySqlCommand cmdUsuario = new MySqlCommand(queryUsuario, conn))
                     {
-                        cmd.Parameters.AddWithValue("@username", usuario);
-                        cmd.Parameters.AddWithValue("@password", contraseña);
+                        cmdUsuario.Parameters.AddWithValue("@username", usuario);
+                        cmdUsuario.Parameters.AddWithValue("@password", contraseña);
 
-                        object result = cmd.ExecuteScalar();
-
-                        if (result != null)
+                        using (MySqlDataReader readerUsuario = cmdUsuario.ExecuteReader())
                         {
-                            string rol = result.ToString();
-                            MessageBox.Show("Inicio de sesión exitoso.");
-
-                            // Redirección según el rol
-                            switch (rol)
+                            if (readerUsuario.Read())
                             {
-                                case "Admin":
-                                    new AdminForm().Show();
-                                    break;
-                                case "Cliente":
-                                    new ClienteForm().Show();
-                                    break;
-                                case "Veterinario":
-                                    new VeterinarioForm().Show();
-                                    break;
-                                default:
-                                    MessageBox.Show("Rol desconocido.");
-                                    break;
-                            }
+                                string rol = readerUsuario["rol"].ToString();
+                                int idClientes = readerUsuario["idClientes"] != DBNull.Value ? Convert.ToInt32(readerUsuario["idClientes"]) : 0;
 
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Usuario o contraseña incorrectos.");
+                                readerUsuario.Close(); // Cerramos el reader antes de la segunda consulta
+
+                                // Segunda consulta para obtener el nombre y apellido del cliente en la tabla clientes
+                                string queryCliente = "SELECT nombre, apellido FROM clientes WHERE idClientes = @idClientes";
+                                using (MySqlCommand cmdCliente = new MySqlCommand(queryCliente, conn))
+                                {
+                                    cmdCliente.Parameters.AddWithValue("@idClientes", idClientes);
+
+                                    using (MySqlDataReader readerCliente = cmdCliente.ExecuteReader())
+                                    {
+                                        if (readerCliente.Read())
+                                        {
+                                            string nombreCompleto = $"{readerCliente["nombre"]} {readerCliente["apellido"]}";
+
+                                            MessageBox.Show("Inicio de sesión exitoso.");
+
+                                            switch (rol)
+                                            {
+                                                case "Cliente":
+                                                    // Pasa idClientes y nombreCompleto al formulario ClienteForm
+                                                    new ClienteForm(idClientes, nombreCompleto).Show();
+                                                    break;
+                                                case "Admin":
+                                                    new AdminForm().Show();
+                                                    break;
+                                                case "Veterinario":
+                                                    new VeterinarioForm().Show();
+                                                    break;
+                                                default:
+                                                    MessageBox.Show("Rol desconocido.");
+                                                    break;
+                                            }
+                                            this.Hide();
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("No se pudo obtener el nombre del cliente.");
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Usuario o contraseña incorrectos.");
+                            }
                         }
                     }
                 }

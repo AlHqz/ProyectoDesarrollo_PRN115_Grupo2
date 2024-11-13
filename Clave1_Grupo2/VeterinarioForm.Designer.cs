@@ -31,30 +31,28 @@
             this.tabControlVeterinario = new System.Windows.Forms.TabControl();
             this.tabMascota = new System.Windows.Forms.TabPage();
             this.dgvMascotas = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Raza = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EdadEnMeses = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Especie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Castrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxMascotaInfo = new System.Windows.Forms.GroupBox();
+            this.cmbNombreClienteMascota = new System.Windows.Forms.ComboBox();
             this.btnBuscarMascota = new System.Windows.Forms.Button();
             this.lblNombreCliente = new System.Windows.Forms.Label();
             this.tabConsultas = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbRegistroConsulta = new System.Windows.Forms.GroupBox();
             this.btnGuardarConsulta = new System.Windows.Forms.Button();
             this.txtIndicaciones = new System.Windows.Forms.TextBox();
             this.lblIndicaciones = new System.Windows.Forms.Label();
-            this.txtSintomas = new System.Windows.Forms.TextBox();
-            this.lblSintomas = new System.Windows.Forms.Label();
             this.txtDescripcionConsulta = new System.Windows.Forms.TextBox();
+            this.lblSintomas = new System.Windows.Forms.Label();
+            this.txtSintomas = new System.Windows.Forms.TextBox();
             this.lblDescripcionConsulta = new System.Windows.Forms.Label();
             this.tabCuadroVacunas = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dgvVacunas = new System.Windows.Forms.DataGridView();
             this.NombreVacuna = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaAplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProximaFechaAplicacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBuscarVacunas = new System.Windows.Forms.GroupBox();
+            this.cmbBuscarMascota = new System.Windows.Forms.ComboBox();
             this.btnBuscarVacunas = new System.Windows.Forms.Button();
             this.lblMascota = new System.Windows.Forms.Label();
             this.gbRegistroVacunas = new System.Windows.Forms.GroupBox();
@@ -65,22 +63,18 @@
             this.lblFechaAplicacion = new System.Windows.Forms.Label();
             this.txtNombreVacuna = new System.Windows.Forms.TextBox();
             this.lblNombreVacuna = new System.Windows.Forms.Label();
-            this.cmbNombreClienteMascota = new System.Windows.Forms.ComboBox();
-            this.cmbBuscarMascota = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControlVeterinario.SuspendLayout();
             this.tabMascota.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).BeginInit();
             this.groupBoxMascotaInfo.SuspendLayout();
             this.tabConsultas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbRegistroConsulta.SuspendLayout();
             this.tabCuadroVacunas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVacunas)).BeginInit();
             this.gbBuscarVacunas.SuspendLayout();
             this.gbRegistroVacunas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlVeterinario
@@ -109,47 +103,11 @@
             // dgvMascotas
             // 
             this.dgvMascotas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMascotas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Raza,
-            this.EdadEnMeses,
-            this.Peso,
-            this.Especie,
-            this.Castrado});
             this.dgvMascotas.Location = new System.Drawing.Point(0, 64);
             this.dgvMascotas.Name = "dgvMascotas";
-            this.dgvMascotas.Size = new System.Drawing.Size(643, 153);
+            this.dgvMascotas.Size = new System.Drawing.Size(785, 354);
             this.dgvMascotas.TabIndex = 10;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Raza
-            // 
-            this.Raza.HeaderText = "Raza";
-            this.Raza.Name = "Raza";
-            // 
-            // EdadEnMeses
-            // 
-            this.EdadEnMeses.HeaderText = "Edad (meses)";
-            this.EdadEnMeses.Name = "EdadEnMeses";
-            // 
-            // Peso
-            // 
-            this.Peso.HeaderText = "Peso (Kg)";
-            this.Peso.Name = "Peso";
-            // 
-            // Especie
-            // 
-            this.Especie.HeaderText = "Especie";
-            this.Especie.Name = "Especie";
-            // 
-            // Castrado
-            // 
-            this.Castrado.HeaderText = "Castrado";
-            this.Castrado.Name = "Castrado";
+            this.dgvMascotas.SelectionChanged += new System.EventHandler(this.dgvMascotas_SelectionChanged);
             // 
             // groupBoxMascotaInfo
             // 
@@ -163,6 +121,14 @@
             this.groupBoxMascotaInfo.TabStop = false;
             this.groupBoxMascotaInfo.Text = "Información de la Mascota";
             // 
+            // cmbNombreClienteMascota
+            // 
+            this.cmbNombreClienteMascota.FormattingEnabled = true;
+            this.cmbNombreClienteMascota.Location = new System.Drawing.Point(115, 17);
+            this.cmbNombreClienteMascota.Name = "cmbNombreClienteMascota";
+            this.cmbNombreClienteMascota.Size = new System.Drawing.Size(121, 21);
+            this.cmbNombreClienteMascota.TabIndex = 12;
+            // 
             // btnBuscarMascota
             // 
             this.btnBuscarMascota.Location = new System.Drawing.Point(251, 14);
@@ -171,6 +137,7 @@
             this.btnBuscarMascota.TabIndex = 11;
             this.btnBuscarMascota.Text = "Buscar";
             this.btnBuscarMascota.UseVisualStyleBackColor = true;
+            this.btnBuscarMascota.Click += new System.EventHandler(this.btnBuscarMascota_Click);
             // 
             // lblNombreCliente
             // 
@@ -193,14 +160,24 @@
             this.tabConsultas.Text = "Consultas";
             this.tabConsultas.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Clave1_Grupo2.Properties.Resources.mascota;
+            this.pictureBox1.Location = new System.Drawing.Point(411, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 133);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // gbRegistroConsulta
             // 
             this.gbRegistroConsulta.Controls.Add(this.btnGuardarConsulta);
             this.gbRegistroConsulta.Controls.Add(this.txtIndicaciones);
             this.gbRegistroConsulta.Controls.Add(this.lblIndicaciones);
-            this.gbRegistroConsulta.Controls.Add(this.txtSintomas);
-            this.gbRegistroConsulta.Controls.Add(this.lblSintomas);
             this.gbRegistroConsulta.Controls.Add(this.txtDescripcionConsulta);
+            this.gbRegistroConsulta.Controls.Add(this.lblSintomas);
+            this.gbRegistroConsulta.Controls.Add(this.txtSintomas);
             this.gbRegistroConsulta.Controls.Add(this.lblDescripcionConsulta);
             this.gbRegistroConsulta.Location = new System.Drawing.Point(9, 11);
             this.gbRegistroConsulta.Name = "gbRegistroConsulta";
@@ -217,6 +194,7 @@
             this.btnGuardarConsulta.TabIndex = 12;
             this.btnGuardarConsulta.Text = "Guardar";
             this.btnGuardarConsulta.UseVisualStyleBackColor = true;
+            this.btnGuardarConsulta.Click += new System.EventHandler(this.btnGuardarConsulta_Click);
             // 
             // txtIndicaciones
             // 
@@ -235,13 +213,13 @@
             this.lblIndicaciones.TabIndex = 4;
             this.lblIndicaciones.Text = "Indicaciones:";
             // 
-            // txtSintomas
+            // txtDescripcionConsulta
             // 
-            this.txtSintomas.Location = new System.Drawing.Point(129, 124);
-            this.txtSintomas.Multiline = true;
-            this.txtSintomas.Name = "txtSintomas";
-            this.txtSintomas.Size = new System.Drawing.Size(239, 97);
-            this.txtSintomas.TabIndex = 3;
+            this.txtDescripcionConsulta.Location = new System.Drawing.Point(129, 124);
+            this.txtDescripcionConsulta.Multiline = true;
+            this.txtDescripcionConsulta.Name = "txtDescripcionConsulta";
+            this.txtDescripcionConsulta.Size = new System.Drawing.Size(239, 97);
+            this.txtDescripcionConsulta.TabIndex = 3;
             // 
             // lblSintomas
             // 
@@ -252,13 +230,13 @@
             this.lblSintomas.TabIndex = 2;
             this.lblSintomas.Text = "Síntomas:";
             // 
-            // txtDescripcionConsulta
+            // txtSintomas
             // 
-            this.txtDescripcionConsulta.Location = new System.Drawing.Point(132, 17);
-            this.txtDescripcionConsulta.Multiline = true;
-            this.txtDescripcionConsulta.Name = "txtDescripcionConsulta";
-            this.txtDescripcionConsulta.Size = new System.Drawing.Size(237, 101);
-            this.txtDescripcionConsulta.TabIndex = 1;
+            this.txtSintomas.Location = new System.Drawing.Point(132, 17);
+            this.txtSintomas.Multiline = true;
+            this.txtSintomas.Name = "txtSintomas";
+            this.txtSintomas.Size = new System.Drawing.Size(237, 101);
+            this.txtSintomas.TabIndex = 1;
             // 
             // lblDescripcionConsulta
             // 
@@ -272,7 +250,7 @@
             // tabCuadroVacunas
             // 
             this.tabCuadroVacunas.Controls.Add(this.pictureBox2);
-            this.tabCuadroVacunas.Controls.Add(this.dataGridView2);
+            this.tabCuadroVacunas.Controls.Add(this.dgvVacunas);
             this.tabCuadroVacunas.Controls.Add(this.gbBuscarVacunas);
             this.tabCuadroVacunas.Controls.Add(this.gbRegistroVacunas);
             this.tabCuadroVacunas.Location = new System.Drawing.Point(4, 22);
@@ -282,17 +260,27 @@
             this.tabCuadroVacunas.Text = "Cuadro Vacunas";
             this.tabCuadroVacunas.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // pictureBox2
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.pictureBox2.Image = global::Clave1_Grupo2.Properties.Resources.vacunas;
+            this.pictureBox2.Location = new System.Drawing.Point(355, 75);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(180, 129);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            // 
+            // dgvVacunas
+            // 
+            this.dgvVacunas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVacunas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreVacuna,
             this.FechaAplicacion,
             this.ProximaFechaAplicacion});
-            this.dataGridView2.Location = new System.Drawing.Point(6, 75);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(343, 131);
-            this.dataGridView2.TabIndex = 15;
+            this.dgvVacunas.Location = new System.Drawing.Point(6, 75);
+            this.dgvVacunas.Name = "dgvVacunas";
+            this.dgvVacunas.Size = new System.Drawing.Size(343, 131);
+            this.dgvVacunas.TabIndex = 15;
             // 
             // NombreVacuna
             // 
@@ -321,6 +309,14 @@
             this.gbBuscarVacunas.TabStop = false;
             this.gbBuscarVacunas.Text = "Buscar Vacunas por Mascota";
             // 
+            // cmbBuscarMascota
+            // 
+            this.cmbBuscarMascota.FormattingEnabled = true;
+            this.cmbBuscarMascota.Location = new System.Drawing.Point(110, 17);
+            this.cmbBuscarMascota.Name = "cmbBuscarMascota";
+            this.cmbBuscarMascota.Size = new System.Drawing.Size(121, 21);
+            this.cmbBuscarMascota.TabIndex = 14;
+            // 
             // btnBuscarVacunas
             // 
             this.btnBuscarVacunas.Location = new System.Drawing.Point(10, 44);
@@ -329,6 +325,7 @@
             this.btnBuscarVacunas.TabIndex = 13;
             this.btnBuscarVacunas.Text = "Buscar";
             this.btnBuscarVacunas.UseVisualStyleBackColor = true;
+            this.btnBuscarVacunas.Click += new System.EventHandler(this.btnBuscarVacunas_Click);
             // 
             // lblMascota
             // 
@@ -363,6 +360,7 @@
             this.btnGuardarVacuna.TabIndex = 13;
             this.btnGuardarVacuna.Text = "Guardar";
             this.btnGuardarVacuna.UseVisualStyleBackColor = true;
+            this.btnGuardarVacuna.Click += new System.EventHandler(this.btnGuardarVacuna_Click);
             // 
             // dtpProximaFechaAplicacion
             // 
@@ -412,42 +410,6 @@
             this.lblNombreVacuna.TabIndex = 0;
             this.lblNombreVacuna.Text = "Nombre de Vacuna:";
             // 
-            // cmbNombreClienteMascota
-            // 
-            this.cmbNombreClienteMascota.FormattingEnabled = true;
-            this.cmbNombreClienteMascota.Location = new System.Drawing.Point(115, 17);
-            this.cmbNombreClienteMascota.Name = "cmbNombreClienteMascota";
-            this.cmbNombreClienteMascota.Size = new System.Drawing.Size(121, 21);
-            this.cmbNombreClienteMascota.TabIndex = 12;
-            // 
-            // cmbBuscarMascota
-            // 
-            this.cmbBuscarMascota.FormattingEnabled = true;
-            this.cmbBuscarMascota.Location = new System.Drawing.Point(110, 17);
-            this.cmbBuscarMascota.Name = "cmbBuscarMascota";
-            this.cmbBuscarMascota.Size = new System.Drawing.Size(121, 21);
-            this.cmbBuscarMascota.TabIndex = 14;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Clave1_Grupo2.Properties.Resources.mascota;
-            this.pictureBox1.Location = new System.Drawing.Point(411, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 133);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Clave1_Grupo2.Properties.Resources.vacunas;
-            this.pictureBox2.Location = new System.Drawing.Point(355, 75);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(180, 129);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            // 
             // VeterinarioForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,16 +424,16 @@
             this.groupBoxMascotaInfo.ResumeLayout(false);
             this.groupBoxMascotaInfo.PerformLayout();
             this.tabConsultas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbRegistroConsulta.ResumeLayout(false);
             this.gbRegistroConsulta.PerformLayout();
             this.tabCuadroVacunas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVacunas)).EndInit();
             this.gbBuscarVacunas.ResumeLayout(false);
             this.gbBuscarVacunas.PerformLayout();
             this.gbRegistroVacunas.ResumeLayout(false);
             this.gbRegistroVacunas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,12 +443,6 @@
         private System.Windows.Forms.TabControl tabControlVeterinario;
         private System.Windows.Forms.TabPage tabMascota;
         private System.Windows.Forms.DataGridView dgvMascotas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Raza;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EdadEnMeses;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Peso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Especie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Castrado;
         private System.Windows.Forms.GroupBox groupBoxMascotaInfo;
         private System.Windows.Forms.Button btnBuscarMascota;
         private System.Windows.Forms.Label lblNombreCliente;
@@ -496,13 +452,13 @@
         private System.Windows.Forms.Button btnGuardarConsulta;
         private System.Windows.Forms.TextBox txtIndicaciones;
         private System.Windows.Forms.Label lblIndicaciones;
-        private System.Windows.Forms.TextBox txtSintomas;
-        private System.Windows.Forms.Label lblSintomas;
         private System.Windows.Forms.TextBox txtDescripcionConsulta;
+        private System.Windows.Forms.Label lblSintomas;
+        private System.Windows.Forms.TextBox txtSintomas;
         private System.Windows.Forms.Label lblDescripcionConsulta;
         private System.Windows.Forms.TabPage tabCuadroVacunas;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvVacunas;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreVacuna;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAplicacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProximaFechaAplicacion;

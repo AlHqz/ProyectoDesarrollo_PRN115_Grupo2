@@ -11,6 +11,7 @@ namespace Clave1_Grupo2
     {
         public int IdMascotas { get; set; }
         public int IdDueno { get; set; }
+        public int IdClientes { get; set; }
         public string NombreMascota { get; set; }
         public string Especie { get; set; }
         public string Raza { get; set; }

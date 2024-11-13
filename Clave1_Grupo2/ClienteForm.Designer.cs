@@ -31,6 +31,7 @@
             this.tabControlCliente = new System.Windows.Forms.TabControl();
             this.tabCliente = new System.Windows.Forms.TabPage();
             this.groupBoxClienteInfo = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnModificarCliente = new System.Windows.Forms.Button();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.tabMascota = new System.Windows.Forms.TabPage();
             this.groupBoxMascotaInfo = new System.Windows.Forms.GroupBox();
-            this.cmbDueno = new System.Windows.Forms.ComboBox();
+            this.cmbDueño = new System.Windows.Forms.ComboBox();
             this.lblDueño = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.lblCastrado = new System.Windows.Forms.Label();
@@ -62,15 +63,16 @@
             this.lblEspecie = new System.Windows.Forms.Label();
             this.txtNombreMascota = new System.Windows.Forms.TextBox();
             this.lblNombreMascota = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminarMascota = new System.Windows.Forms.Button();
             this.btnModificarMascota = new System.Windows.Forms.Button();
             this.btnIngresarMascota = new System.Windows.Forms.Button();
             this.dgvMascotas = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabCompras = new System.Windows.Forms.TabPage();
             this.txtMontoTotal = new System.Windows.Forms.TextBox();
             this.lblMontoTotal = new System.Windows.Forms.Label();
-            this.btnRealizarComprar = new System.Windows.Forms.Button();
+            this.btnRealizarCompra = new System.Windows.Forms.Button();
             this.lblMetodoPago = new System.Windows.Forms.Label();
             this.groupBoxCompra = new System.Windows.Forms.GroupBox();
             this.btnAgregarCarrito = new System.Windows.Forms.Button();
@@ -81,51 +83,49 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblProductoSeleccionado = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.CategoriaProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductoSeleccionado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantidadProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbMetodoPago = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabCitas = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NombreMascota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvCitas = new System.Windows.Forms.DataGridView();
             this.gbCitas = new System.Windows.Forms.GroupBox();
             this.cmbTipoServicio = new System.Windows.Forms.ComboBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.cmbNombreMascota = new System.Windows.Forms.ComboBox();
-            this.btnCancelarCita = new System.Windows.Forms.Button();
             this.btnAgendarCita = new System.Windows.Forms.Button();
-            this.btnModificarCita = new System.Windows.Forms.Button();
             this.cmbHorarioCita = new System.Windows.Forms.ComboBox();
             this.lblHorario = new System.Windows.Forms.Label();
             this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
             this.lblFechaCita = new System.Windows.Forms.Label();
             this.txtNombreMascotaCita = new System.Windows.Forms.TextBox();
             this.lblMascota = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.idCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreMascota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlCliente.SuspendLayout();
             this.tabCliente.SuspendLayout();
             this.groupBoxClienteInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabMascota.SuspendLayout();
             this.groupBoxMascotaInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabCompras.SuspendLayout();
             this.groupBoxCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            this.tabCitas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.gbCitas.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabCitas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
+            this.gbCitas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,6 +175,16 @@
             this.groupBoxClienteInfo.TabStop = false;
             this.groupBoxClienteInfo.Text = "Información del Cliente";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Clave1_Grupo2.Properties.Resources.cliente1;
+            this.pictureBox3.Location = new System.Drawing.Point(200, 62);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(172, 128);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(54, 142);
@@ -190,6 +200,7 @@
             this.btnModificarCliente.TabIndex = 5;
             this.btnModificarCliente.Text = "Modificar";
             this.btnModificarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
             // lblEmail
             // 
@@ -236,9 +247,6 @@
             // 
             this.cmbSexo.Enabled = false;
             this.cmbSexo.FormattingEnabled = true;
-            this.cmbSexo.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino"});
             this.cmbSexo.Location = new System.Drawing.Point(53, 43);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(121, 21);
@@ -290,7 +298,7 @@
             // tabMascota
             // 
             this.tabMascota.Controls.Add(this.groupBoxMascotaInfo);
-            this.tabMascota.Controls.Add(this.btnLimpiar);
+            this.tabMascota.Controls.Add(this.btnActualizar);
             this.tabMascota.Controls.Add(this.btnEliminarMascota);
             this.tabMascota.Controls.Add(this.btnModificarMascota);
             this.tabMascota.Controls.Add(this.btnIngresarMascota);
@@ -306,7 +314,7 @@
             // 
             // groupBoxMascotaInfo
             // 
-            this.groupBoxMascotaInfo.Controls.Add(this.cmbDueno);
+            this.groupBoxMascotaInfo.Controls.Add(this.cmbDueño);
             this.groupBoxMascotaInfo.Controls.Add(this.lblDueño);
             this.groupBoxMascotaInfo.Controls.Add(this.checkBox1);
             this.groupBoxMascotaInfo.Controls.Add(this.lblCastrado);
@@ -329,13 +337,13 @@
             this.groupBoxMascotaInfo.TabStop = false;
             this.groupBoxMascotaInfo.Text = "Información de la Mascota";
             // 
-            // cmbDueno
+            // cmbDueño
             // 
-            this.cmbDueno.FormattingEnabled = true;
-            this.cmbDueno.Location = new System.Drawing.Point(95, 16);
-            this.cmbDueno.Name = "cmbDueno";
-            this.cmbDueno.Size = new System.Drawing.Size(121, 21);
-            this.cmbDueno.TabIndex = 16;
+            this.cmbDueño.FormattingEnabled = true;
+            this.cmbDueño.Location = new System.Drawing.Point(95, 16);
+            this.cmbDueño.Name = "cmbDueño";
+            this.cmbDueño.Size = new System.Drawing.Size(121, 21);
+            this.cmbDueño.TabIndex = 16;
             // 
             // lblDueño
             // 
@@ -467,14 +475,15 @@
             this.lblNombreMascota.TabIndex = 0;
             this.lblNombreMascota.Text = "Nombre Mascota:";
             // 
-            // btnLimpiar
+            // btnActualizar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(629, 258);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 14;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Location = new System.Drawing.Point(629, 258);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 14;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminarMascota
             // 
@@ -484,6 +493,7 @@
             this.btnEliminarMascota.TabIndex = 13;
             this.btnEliminarMascota.Text = "Eliminar";
             this.btnEliminarMascota.UseVisualStyleBackColor = true;
+            this.btnEliminarMascota.Click += new System.EventHandler(this.btnEliminarMascota_Click);
             // 
             // btnModificarMascota
             // 
@@ -493,6 +503,7 @@
             this.btnModificarMascota.TabIndex = 12;
             this.btnModificarMascota.Text = "Modificar";
             this.btnModificarMascota.UseVisualStyleBackColor = true;
+            this.btnModificarMascota.Click += new System.EventHandler(this.btnModificarMascota_Click);
             // 
             // btnIngresarMascota
             // 
@@ -502,6 +513,7 @@
             this.btnIngresarMascota.TabIndex = 10;
             this.btnIngresarMascota.Text = "Ingresar";
             this.btnIngresarMascota.UseVisualStyleBackColor = true;
+            this.btnIngresarMascota.Click += new System.EventHandler(this.btnIngresarMascota_Click);
             // 
             // dgvMascotas
             // 
@@ -510,12 +522,23 @@
             this.dgvMascotas.Name = "dgvMascotas";
             this.dgvMascotas.Size = new System.Drawing.Size(460, 408);
             this.dgvMascotas.TabIndex = 9;
+            this.dgvMascotas.SelectionChanged += new System.EventHandler(this.dgvMascotas_SelectionChanged);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Clave1_Grupo2.Properties.Resources.mascotas;
+            this.pictureBox2.Location = new System.Drawing.Point(469, 287);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(296, 127);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 15;
+            this.pictureBox2.TabStop = false;
             // 
             // tabCompras
             // 
             this.tabCompras.Controls.Add(this.txtMontoTotal);
             this.tabCompras.Controls.Add(this.lblMontoTotal);
-            this.tabCompras.Controls.Add(this.btnRealizarComprar);
+            this.tabCompras.Controls.Add(this.btnRealizarCompra);
             this.tabCompras.Controls.Add(this.lblMetodoPago);
             this.tabCompras.Controls.Add(this.groupBoxCompra);
             this.tabCompras.Controls.Add(this.dgvProductos);
@@ -546,14 +569,15 @@
             this.lblMontoTotal.TabIndex = 6;
             this.lblMontoTotal.Text = "Monto Total:";
             // 
-            // btnRealizarComprar
+            // btnRealizarCompra
             // 
-            this.btnRealizarComprar.Location = new System.Drawing.Point(379, 229);
-            this.btnRealizarComprar.Name = "btnRealizarComprar";
-            this.btnRealizarComprar.Size = new System.Drawing.Size(71, 23);
-            this.btnRealizarComprar.TabIndex = 1;
-            this.btnRealizarComprar.Text = "Comprar";
-            this.btnRealizarComprar.UseVisualStyleBackColor = true;
+            this.btnRealizarCompra.Location = new System.Drawing.Point(379, 229);
+            this.btnRealizarCompra.Name = "btnRealizarCompra";
+            this.btnRealizarCompra.Size = new System.Drawing.Size(71, 23);
+            this.btnRealizarCompra.TabIndex = 1;
+            this.btnRealizarCompra.Text = "Comprar";
+            this.btnRealizarCompra.UseVisualStyleBackColor = true;
+            this.btnRealizarCompra.Click += new System.EventHandler(this.btnRealizarCompra_Click);
             // 
             // lblMetodoPago
             // 
@@ -588,6 +612,7 @@
             this.btnAgregarCarrito.TabIndex = 8;
             this.btnAgregarCarrito.Text = "Agregar al Carrito";
             this.btnAgregarCarrito.UseVisualStyleBackColor = true;
+            this.btnAgregarCarrito.Click += new System.EventHandler(this.btnAgregarCarrito_Click);
             // 
             // cmbProductoSeleccionado
             // 
@@ -600,10 +625,6 @@
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Items.AddRange(new object[] {
-            "Alimentos",
-            "Accesorios",
-            "Medicinas"});
             this.cmbCategoria.Location = new System.Drawing.Point(60, 20);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
@@ -657,51 +678,62 @@
             // 
             this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CategoriaProducto,
-            this.ProductoSeleccionado,
-            this.CantidadProducto,
-            this.SubTotal});
+            this.Categoria,
+            this.NombreProducto,
+            this.Precio,
+            this.Cantidad,
+            this.Subtotal});
             this.dgvProductos.Location = new System.Drawing.Point(7, 88);
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.Size = new System.Drawing.Size(443, 135);
             this.dgvProductos.TabIndex = 0;
             // 
-            // CategoriaProducto
+            // Categoria
             // 
-            this.CategoriaProducto.HeaderText = "Categoria";
-            this.CategoriaProducto.Name = "CategoriaProducto";
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
             // 
-            // ProductoSeleccionado
+            // NombreProducto
             // 
-            this.ProductoSeleccionado.HeaderText = "Producto Seleccionado";
-            this.ProductoSeleccionado.Name = "ProductoSeleccionado";
+            this.NombreProducto.HeaderText = "Producto";
+            this.NombreProducto.Name = "NombreProducto";
             // 
-            // CantidadProducto
+            // Precio
             // 
-            this.CantidadProducto.HeaderText = "Cantidad";
-            this.CantidadProducto.Name = "CantidadProducto";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
             // 
-            // SubTotal
+            // Cantidad
             // 
-            this.SubTotal.HeaderText = "Subtotal";
-            this.SubTotal.Name = "SubTotal";
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.Name = "Subtotal";
             // 
             // cmbMetodoPago
             // 
             this.cmbMetodoPago.FormattingEnabled = true;
-            this.cmbMetodoPago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Tarjeta de Crédito",
-            "Tarjeta de Débito",
-            "Bitcoin"});
             this.cmbMetodoPago.Location = new System.Drawing.Point(254, 229);
             this.cmbMetodoPago.Name = "cmbMetodoPago";
             this.cmbMetodoPago.Size = new System.Drawing.Size(121, 21);
             this.cmbMetodoPago.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Clave1_Grupo2.Properties.Resources.compras_tienda;
+            this.pictureBox1.Location = new System.Drawing.Point(468, 88);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // tabCitas
             // 
-            this.tabCitas.Controls.Add(this.dataGridView1);
+            this.tabCitas.Controls.Add(this.dgvCitas);
             this.tabCitas.Controls.Add(this.gbCitas);
             this.tabCitas.Location = new System.Drawing.Point(4, 22);
             this.tabCitas.Name = "tabCitas";
@@ -710,38 +742,19 @@
             this.tabCitas.Text = "Citas";
             this.tabCitas.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvCitas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idCita,
             this.NombreMascota,
             this.FechaCita,
             this.Horario,
             this.Estado});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 162);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(443, 209);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // NombreMascota
-            // 
-            this.NombreMascota.HeaderText = "Nombre de Mascota";
-            this.NombreMascota.Name = "NombreMascota";
-            // 
-            // FechaCita
-            // 
-            this.FechaCita.HeaderText = "Fecha de la Cita";
-            this.FechaCita.Name = "FechaCita";
-            // 
-            // Horario
-            // 
-            this.Horario.HeaderText = "Horario";
-            this.Horario.Name = "Horario";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
+            this.dgvCitas.Location = new System.Drawing.Point(3, 162);
+            this.dgvCitas.Name = "dgvCitas";
+            this.dgvCitas.Size = new System.Drawing.Size(541, 209);
+            this.dgvCitas.TabIndex = 4;
             // 
             // gbCitas
             // 
@@ -750,9 +763,7 @@
             this.gbCitas.Controls.Add(this.label2);
             this.gbCitas.Controls.Add(this.lblId);
             this.gbCitas.Controls.Add(this.cmbNombreMascota);
-            this.gbCitas.Controls.Add(this.btnCancelarCita);
             this.gbCitas.Controls.Add(this.btnAgendarCita);
-            this.gbCitas.Controls.Add(this.btnModificarCita);
             this.gbCitas.Controls.Add(this.cmbHorarioCita);
             this.gbCitas.Controls.Add(this.lblHorario);
             this.gbCitas.Controls.Add(this.dtpFechaCita);
@@ -769,10 +780,25 @@
             // cmbTipoServicio
             // 
             this.cmbTipoServicio.FormattingEnabled = true;
+            this.cmbTipoServicio.Items.AddRange(new object[] {
+            "Cita Médica",
+            "Compra de Alimentos",
+            "Compra de Accesorios",
+            "Medicamentos"});
             this.cmbTipoServicio.Location = new System.Drawing.Point(110, 96);
             this.cmbTipoServicio.Name = "cmbTipoServicio";
             this.cmbTipoServicio.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoServicio.TabIndex = 20;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::Clave1_Grupo2.Properties.Resources.agendar_cita;
+            this.pictureBox5.Location = new System.Drawing.Point(323, 43);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(120, 105);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 3;
+            this.pictureBox5.TabStop = false;
             // 
             // label2
             // 
@@ -799,43 +825,22 @@
             this.cmbNombreMascota.Name = "cmbNombreMascota";
             this.cmbNombreMascota.Size = new System.Drawing.Size(121, 21);
             this.cmbNombreMascota.TabIndex = 17;
-            // 
-            // btnCancelarCita
-            // 
-            this.btnCancelarCita.Location = new System.Drawing.Point(172, 124);
-            this.btnCancelarCita.Name = "btnCancelarCita";
-            this.btnCancelarCita.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarCita.TabIndex = 16;
-            this.btnCancelarCita.Text = "Cancelar";
-            this.btnCancelarCita.UseVisualStyleBackColor = true;
+            this.cmbNombreMascota.SelectedIndexChanged += new System.EventHandler(this.cmbNombreMascota_SelectedIndexChanged);
             // 
             // btnAgendarCita
             // 
-            this.btnAgendarCita.Location = new System.Drawing.Point(10, 124);
+            this.btnAgendarCita.Location = new System.Drawing.Point(110, 123);
             this.btnAgendarCita.Name = "btnAgendarCita";
             this.btnAgendarCita.Size = new System.Drawing.Size(75, 23);
             this.btnAgendarCita.TabIndex = 15;
             this.btnAgendarCita.Text = "Agendar";
             this.btnAgendarCita.UseVisualStyleBackColor = true;
-            // 
-            // btnModificarCita
-            // 
-            this.btnModificarCita.Location = new System.Drawing.Point(91, 124);
-            this.btnModificarCita.Name = "btnModificarCita";
-            this.btnModificarCita.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarCita.TabIndex = 14;
-            this.btnModificarCita.Text = "Modificar";
-            this.btnModificarCita.UseVisualStyleBackColor = true;
+            this.btnAgendarCita.Click += new System.EventHandler(this.btnAgendarCita_Click);
             // 
             // cmbHorarioCita
             // 
             this.cmbHorarioCita.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbHorarioCita.FormattingEnabled = true;
-            this.cmbHorarioCita.Items.AddRange(new object[] {
-            "10:00 AM",
-            "11:00 AM",
-            "12:00 AM",
-            "2:00 PM"});
             this.cmbHorarioCita.Location = new System.Drawing.Point(110, 70);
             this.cmbHorarioCita.Name = "cmbHorarioCita";
             this.cmbHorarioCita.Size = new System.Drawing.Size(121, 21);
@@ -882,45 +887,30 @@
             this.lblMascota.TabIndex = 0;
             this.lblMascota.Text = "Nombre de Mascota:";
             // 
-            // pictureBox3
+            // idCita
             // 
-            this.pictureBox3.Image = global::Clave1_Grupo2.Properties.Resources.cliente1;
-            this.pictureBox3.Location = new System.Drawing.Point(200, 62);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(172, 128);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
+            this.idCita.HeaderText = "idCita";
+            this.idCita.Name = "idCita";
             // 
-            // pictureBox2
+            // NombreMascota
             // 
-            this.pictureBox2.Image = global::Clave1_Grupo2.Properties.Resources.mascotas;
-            this.pictureBox2.Location = new System.Drawing.Point(469, 287);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(296, 127);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 15;
-            this.pictureBox2.TabStop = false;
+            this.NombreMascota.HeaderText = "Nombre de Mascota";
+            this.NombreMascota.Name = "NombreMascota";
             // 
-            // pictureBox1
+            // FechaCita
             // 
-            this.pictureBox1.Image = global::Clave1_Grupo2.Properties.Resources.compras_tienda;
-            this.pictureBox1.Location = new System.Drawing.Point(468, 88);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.FechaCita.HeaderText = "Fecha de la Cita";
+            this.FechaCita.Name = "FechaCita";
             // 
-            // pictureBox5
+            // Horario
             // 
-            this.pictureBox5.Image = global::Clave1_Grupo2.Properties.Resources.agendar_cita;
-            this.pictureBox5.Location = new System.Drawing.Point(323, 43);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(120, 105);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 3;
-            this.pictureBox5.TabStop = false;
+            this.Horario.HeaderText = "Horario";
+            this.Horario.Name = "Horario";
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
             // 
             // ClienteForm
             // 
@@ -934,23 +924,23 @@
             this.tabCliente.ResumeLayout(false);
             this.groupBoxClienteInfo.ResumeLayout(false);
             this.groupBoxClienteInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabMascota.ResumeLayout(false);
             this.groupBoxMascotaInfo.ResumeLayout(false);
             this.groupBoxMascotaInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabCompras.ResumeLayout(false);
             this.tabCompras.PerformLayout();
             this.groupBoxCompra.ResumeLayout(false);
             this.groupBoxCompra.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabCitas.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
             this.gbCitas.ResumeLayout(false);
             this.gbCitas.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
@@ -977,7 +967,7 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TabPage tabMascota;
         private System.Windows.Forms.GroupBox groupBoxMascotaInfo;
-        private System.Windows.Forms.ComboBox cmbDueno;
+        private System.Windows.Forms.ComboBox cmbDueño;
         private System.Windows.Forms.Label lblDueño;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label lblCastrado;
@@ -994,7 +984,7 @@
         private System.Windows.Forms.TextBox txtNombreMascota;
         private System.Windows.Forms.Label lblNombreMascota;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminarMascota;
         private System.Windows.Forms.Button btnModificarMascota;
         private System.Windows.Forms.Button btnIngresarMascota;
@@ -1003,7 +993,7 @@
         private System.Windows.Forms.TextBox txtMontoTotal;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblMontoTotal;
-        private System.Windows.Forms.Button btnRealizarComprar;
+        private System.Windows.Forms.Button btnRealizarCompra;
         private System.Windows.Forms.Label lblMetodoPago;
         private System.Windows.Forms.GroupBox groupBoxCompra;
         private System.Windows.Forms.Button btnAgregarCarrito;
@@ -1014,31 +1004,31 @@
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblProductoSeleccionado;
         private System.Windows.Forms.DataGridView dgvProductos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CategoriaProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductoSeleccionado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantidadProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SubTotal;
         private System.Windows.Forms.ComboBox cmbMetodoPago;
         private System.Windows.Forms.TabPage tabCitas;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreMascota;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCita;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Horario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridView dgvCitas;
         private System.Windows.Forms.GroupBox gbCitas;
         private System.Windows.Forms.ComboBox cmbTipoServicio;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.ComboBox cmbNombreMascota;
-        private System.Windows.Forms.Button btnCancelarCita;
         private System.Windows.Forms.Button btnAgendarCita;
-        private System.Windows.Forms.Button btnModificarCita;
         private System.Windows.Forms.ComboBox cmbHorarioCita;
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.DateTimePicker dtpFechaCita;
         private System.Windows.Forms.Label lblFechaCita;
         private System.Windows.Forms.TextBox txtNombreMascotaCita;
         private System.Windows.Forms.Label lblMascota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCita;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreMascota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCita;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Horario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

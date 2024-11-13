@@ -15,8 +15,6 @@ namespace Clave1_Grupo2
 {
     public partial class AdminForm : Form
     {
-        MySqlConnection connection = new MySqlConnection("Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;");
-        private string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
         private List<Mascota> listaMascotas = new List<Mascota>();
         private int idDuenoSeleccionado = -1;
         private bool enModoBusqueda = false;
@@ -32,7 +30,6 @@ namespace Clave1_Grupo2
             string connectionString = "Server=localhost;Database=catdog veterinaria;Uid=root;Pwd=portillo;";
             facturacionDB = new FacturacionDB(connectionString);
             cita = new Cita(connectionString);
-
             CargarClientes();
             CargarClientesMascotas();
             BloquearControles();
